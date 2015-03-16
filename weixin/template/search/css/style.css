@@ -1,0 +1,261 @@
+/**
+ *  wesearch style
+ * ----------------------
+ *  作者：cugbmao
+ *  时间：2015-03-16
+ *  联系：cugbmao@163.com
+ *
+ *
+ *********************************************************************************************/
+@charset "utf-8";
+
+*{	
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	font-size: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);
+}
+html {
+	height: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	font-size: 14px;
+	line-height: 1.231;
+	-webkit-touch-callout: none;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: stretch;
+	position: relative;
+}
+img {
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+label {
+	cursor: pointer;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+input:focus {
+	outline: none;
+}
+input, button, select, textarea {
+	outline: none;/*-webkit-appearance:none;*//*强制去除表单自带的样式*/
+}
+textarea {
+	resize: none;/*-webkit-appearance:none;*//*强制去除textarea自带的样式*/
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}/*利用阴影来填充掉input自动填充色*/
+
+textarea, input, select {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+	display: block;
+}/*html5设置*/
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
+	font-size: 1em;
+}
+body, input, button, select, textarea, sub {
+	font-family: MuseoSans, sans-serif, Arial;
+}
+em, cite, address, optgroup {
+	font-style: normal;
+}
+
+img, input, button, select, textarea {
+	vertical-align: middle;
+	outline: none;
+}
+ul, ol {
+	list-style: none;
+}
+img, fieldset {
+	border: 0;
+}
+abbr, acronym {
+	cursor: help;
+	border-bottom: 1px dotted black;
+}
+table {
+	width: 100%;
+	border-spacing: 0;
+	border: 0;
+}
+table th, table td {
+	border: 0;
+}
+legend, hr {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+legend, hr, caption {
+	visibility: hidden;
+	font-size: 0;
+	width: 0;
+	height: 0;
+	line-height: 0;
+}
+
+input::-webkit-input-placeholder {
+	color: #DDDDDD !important;
+}
+input:-moz-placeholder {
+	color: #DDDDDD !important;
+}
+input::-moz-placeholder {
+	color: #DDDDDD !important;
+}
+input:-ms-input-placeholder {
+	color: #DDDDDD !important;
+}
+
+
+.tab_bar {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 46px;
+	z-index: 999;
+	background-color: #FFFEFE;
+	border-top: 1px solid #DDDDDD;
+}
+.tab_bar ul {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.tab_bar ul li {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+}
+.tab_bar ul li a {
+	width: 100%;
+	height: 45px;
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 22px 22px;
+}
+.tab_bar ul li a.news {
+	background-image: url(../images/news-tab.png);
+}
+.tab_bar ul li a.search {
+	background-image: url(../images/search-tab.png);
+}
+.tab_bar ul li a.me {
+	background-image: url(../images/me-tab.png);
+}
+.tab_bar ul li a.news.active {
+	background-image: url(../images/news-tab-active.png);
+}
+.tab_bar ul li a.search.active {
+	background-image: url(../images/search-tab-active.png);
+}
+.tab_bar ul li a.me.active {
+	background-image: url(../images/me-tab-active.png);
+}
+.tool_bar {
+	width: 100%;
+	
+}
+.tool_bar div {
+	border-bottom: 1px solid #DDDDDD;
+}
+.tool_bar .search {
+	height: 49px;
+	line-height: 49px;
+	font-size: 14px;
+	position: relative;
+}
+.tool_bar .search input {
+	width: calc(100% - 130px);
+	background: url(../images/search-small.png) center left no-repeat;
+	margin-left: 15px;
+	padding-left: 20px;
+	background-size: 11px 11px;
+}
+.tool_bar .search a.city {
+	color: #999999;
+	width: 90px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	text-align: center;
+}
+.tool_bar .filter {
+	height: 38px;
+	font-size: 12px;
+}
+.tool_bar .filter ul {
+	width: 100%;
+	height: 100%;
+	padding: 0 15px;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.tool_bar .filter ul li {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	text-align: center;
+}
+.tool_bar .filter ul li a {
+	padding-right: 15px;
+	height: 39px;
+	line-height: 39px;
+	color: #999999;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url(../images/arrow-down.png);
+	background-size: 10px 6px;
+}
+
+.rest_list {
+	width: 100%;
+}
+.rest_list ul{
+	
+}
+.rest_list ul li{
+	
+	border-bottom: 1px solid #DDDDDD;
+}
