@@ -32,8 +32,6 @@ body {
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-	font-size: 14px;
-	line-height: 1.231;
 	-webkit-touch-callout: none;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -126,22 +124,21 @@ legend, hr, caption {
 	line-height: 0;
 }
 
-input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
 	color: #DDDDDD !important;
 }
-input:-moz-placeholder {
+::-moz-placeholder {
 	color: #DDDDDD !important;
 }
-input::-moz-placeholder {
-	color: #DDDDDD !important;
-}
-input:-ms-input-placeholder {
+:-ms-input-placeholder {
 	color: #DDDDDD !important;
 }
 
-
+.container {
+	width: 100%;
+}
 .tab_bar {
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
@@ -251,11 +248,93 @@ input:-ms-input-placeholder {
 
 .rest_list {
 	width: 100%;
+	padding-bottom: 46px;
 }
 .rest_list ul{
 	
 }
 .rest_list ul li{
-	
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	height: 82px;
+	padding: 11px 8px 11px 16px;
 	border-bottom: 1px solid #DDDDDD;
+}
+.rest_list ul li > div:first-of-type{
+	width: 100px;
+	height: 80px;
+	overflow: hidden;
+}
+.rest_list ul li > div:last-of-type{
+	width: calc(100% - 100px);
+	overflow: hidden;
+}
+.rest_list ul li div a img{
+	width: 100px;
+	height: 80px;
+}
+.rest_list ul li div dl{
+    margin-left:9px;
+    overflow:hidden;
+}
+.rest_list ul li div dl dt{
+    line-height: 19px;
+    position: relative;
+}
+.rest_list ul li div dl dt a{
+    text-align:left;
+    overflow:hidden;
+    display:block;
+    width:100%;
+    color: #333333;
+    font-size:20px;
+    line-height: 20px;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rest_list ul li div dl dt .star{
+	width: 11px;
+	height: 10px;
+}
+.rest_list ul li div dl dt .ratings, .rest_list ul li div dl dt .price{
+	color: #656565;
+	font-size: 14px;
+}
+.rest_list ul li div dl dt .service{
+	font-size: 12px;
+	border-width: 1px;
+	border-radius: 7px;
+	border-style:solid;
+	padding: 1px 1px;
+	line-height: 16px;
+}
+.rest_list ul li div dl dt .menu{
+	color: #f5a905;
+	border-color: #f5a905;
+}
+.rest_list ul li div dl dt .delivery{
+	color: #95d500;
+	border-color: #95d500;
+}
+.rest_list ul li div dl dt .coupon{
+	color: #f15b43;
+	border-color: #f15b43;
+}
+.rest_list ul li div dl dt .cuisine, .rest_list ul li div dl dt .distance{
+	color: #999999;
+	font-size: 14px;
+}
+.rest_list ul li div dl dt .cuisine{
+	display: inline-block;
+	white-space: nowrap;
+	width: calc(100% - 50px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.rest_list ul li div dl dt .distance{
+	position: absolute;
+	right: 8px;
 }
