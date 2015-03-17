@@ -11,40 +11,432 @@
 	    <meta name='apple-touch-fullscreen' content='yes'>
 	    <meta name="full-screen" content="yes">
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script src="js/zepto.min.js"></script>
+		<script>
+			var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+			Zepto(function($){
+				if(isIOS){
+					$('input').on('focus', function(){
+						$('.tab_bar').css({'position': 'absolute', 'top': $('.container').height() - $('.tab_bar').height() +  'px'});
+					}).on('blur', function(){
+						$('.tab_bar').css({'position': 'fixed', 'top': '', 'bottom': '0px'});
+					});
+				}
+			});
+		</script>
 	</head>
 	<body>
-		<header class="tool_bar">
-			<div class="search">
-				<input type="text" placeholder="Search restaurant and food..." />
-				<a class="city" href="javascript:;">Shanghai</a>
-			</div>
-			<div class="filter">
+		<div class="container">
+			<header class="tool_bar">
+				<div class="search">
+					<input type="text" placeholder="Search restaurant and food..." />
+					<a class="city" href="javascript:;">Shanghai</a>
+				</div>
+				<div class="filter">
+					<ul>
+						<li>
+							<a class="districts" href="javascript:;">
+								Districts
+							</a>
+						</li>
+						<li>
+							<a class="cuisine" href="javascript:;">
+								Cuisine
+							</a>
+						</li>
+						<li>
+							<a class="sort" href="javascript:;">
+								Sort
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<article class="rest_list">
 				<ul>
 					<li>
-						<a class="districts" href="javascript:;">
-							Districts
-						</a>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
 					</li>
 					<li>
-						<a class="cuisine" href="javascript:;">
-							Cuisine
-						</a>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
 					</li>
 					<li>
-						<a class="sort" href="javascript:;">
-							Sort
-						</a>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="javascript:;">
+								<img src="images/rest.png" />
+							</a>
+						</div>
+						<div>
+							<dl>
+	                            <dt>
+	                                <a href="javascript:;">Madison's Restaurant</a>
+	                            </dt>
+	                        </dl>
+							<dl>
+								<dt>
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-yellow.png" />
+									<img class="star" src="images/star-grey.png" />
+									<span class="ratings">4020 ratings</span>
+								</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="price">&yen; 150</span>
+	                        		<span class="service menu">Menu</span>
+	                        		<span class="service delivery">Delivery</span>
+	                        		<span class="service coupon">Coupon</span>
+	                        	</dt>
+	                        </dl>
+	                        <dl>
+	                        	<dt>
+	                        		<span class="cuisine">American Cuisine</span>
+	                        		<span class="distance">430m</span>
+	                        	</dt>
+	                        </dl>
+						</div>
 					</li>
 				</ul>
-			</div>
-		</header>
-		<article class="rest_list">
-			<ul>
-				<li>
-					
-				</li>
-			</ul>
-		</article>
+			</article>
+		</div>
 		<footer class="tab_bar">
 			<ul>
 				<li>
