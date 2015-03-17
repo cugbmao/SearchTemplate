@@ -254,13 +254,17 @@ legend, hr, caption {
 	
 }
 .rest_list ul li{
-	display: -webkit-box;
+	/*display: -webkit-box;
 	display: -moz-box;
 	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
+	-moz-box-orient: horizontal;*/
 	height: 82px;
 	padding: 11px 8px 11px 16px;
 	border-bottom: 1px solid #DDDDDD;
+}
+.rest_list ul li > div{
+    display: table-cell;
+    vertical-align: top;
 }
 .rest_list ul li > div:first-of-type{
 	width: 100px;
@@ -268,7 +272,7 @@ legend, hr, caption {
 	overflow: hidden;
 }
 .rest_list ul li > div:last-of-type{
-	width: calc(100% - 100px);
+	width: 100%;
 	overflow: hidden;
 }
 .rest_list ul li div a img{
