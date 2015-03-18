@@ -136,6 +136,8 @@ legend, hr, caption {
 
 .container {
 	width: 100%;
+	z-index: 1;
+	position: relative;
 }
 .tab_bar {
 	position: fixed;
@@ -152,6 +154,7 @@ legend, hr, caption {
 	height: 100%;
 	display: -webkit-box;
 	display: -moz-box;
+	display: box;
 	-webkit-box-orient: horizontal;
 	-moz-box-orient: horizontal;
 	-webkit-box-sizing: border-box;
@@ -189,9 +192,10 @@ legend, hr, caption {
 }
 .tool_bar {
 	width: 100%;
-	
+	z-index: 200;
+	position: relative;
 }
-.tool_bar div {
+.tool_bar > div {
 	border-bottom: 1px solid #DDDDDD;
 }
 .tool_bar .search {
@@ -222,7 +226,7 @@ legend, hr, caption {
 .tool_bar .filter ul {
 	width: 100%;
 	height: 100%;
-	padding: 0 15px;
+	/*padding: 0 15px;*/
 	display: -webkit-box;
 	display: -moz-box;
 	-webkit-box-orient: horizontal;
@@ -230,25 +234,29 @@ legend, hr, caption {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-.tool_bar .filter ul li {
+.tool_bar .filter ul > li {
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	text-align: center;
 }
-.tool_bar .filter ul li a {
-	padding-right: 15px;
+.tool_bar .filter ul > li > a {
+	display: block;
 	height: 39px;
 	line-height: 39px;
 	color: #999999;
+}
+.tool_bar .filter ul > li > a > span {
+	padding-right: 15px;
 	background-position: center right;
 	background-repeat: no-repeat;
 	background-image: url(../images/arrow-down.png);
 	background-size: 10px 6px;
 }
-
 .rest_list {
 	width: 100%;
 	padding-bottom: 46px;
+	position: relative;
+	z-index: 100;
 }
 .rest_list ul{
 	
@@ -341,4 +349,43 @@ legend, hr, caption {
 .rest_list ul li div dl dt .distance{
 	position: absolute;
 	right: 8px;
+}
+body.show_filter{
+	/*overflow: hidden;*/
+}
+.show_filter .rest_list .mask {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(0,0,0,.4);
+	z-index: 199;
+}
+.filter_list {
+	background: #FFFFFF;
+	/*display: none;*/
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+.filter_list > ol:first-of-type {
+	width: 43.6%;
+	float: left;
+	border-right: 1px solid #DDDDDD;
+}
+.filter_list > ol:last-of-type {
+	width: 56.1%;
+	float: left;
+}
+.filter_list > ol > li {
+	border-bottom: 1px solid #DDDDDD;
+}
+.filter_list > ol > li > a {
+	display: block;
+	height: 49px;
+	line-height: 49px;
+	color: #656565;
+	font-size: 16px;
+	background: #F5F2F0;
 }

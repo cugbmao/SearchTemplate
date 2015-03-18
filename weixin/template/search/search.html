@@ -22,6 +22,9 @@
 						$('.tab_bar').css({'position': 'fixed', 'top': '', 'bottom': '0px'});
 					});
 				}
+				$('.filter > ul > li > a').on('click', function(){
+					$('body').toggleClass('show_filter');
+				});
 			});
 		</script>
 	</head>
@@ -36,17 +39,45 @@
 					<ul>
 						<li>
 							<a class="districts" href="javascript:;">
-								Districts
+								<span>Districts</span>
 							</a>
+							<div class="filter_list">
+								<ol class="district_list">
+									<li ><a href="javascript:;" ><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;" ><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;" ><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+									<li ><a href="javascript:;"><span>Nearby</span></a></li>
+								</ol>
+								<ol class="sub_district_list">
+									<li ><a href="javascript:;"><span>500m</span></a></li>
+									<li ><a href="javascript:;"><span>1000m</span></a></li>
+									<li ><a href="javascript:;"><span>2000m</span></a></li>
+									<li ><a href="javascript:;"><span>3000m</span></a></li>
+								</ol>
+							</div>
 						</li>
 						<li>
 							<a class="cuisine" href="javascript:;">
-								Cuisine
+								<span>Cuisine</span>
 							</a>
 						</li>
 						<li>
 							<a class="sort" href="javascript:;">
-								Sort
+								<span>Sort</span>
 							</a>
 						</li>
 					</ul>
@@ -435,6 +466,7 @@
 						</div>
 					</li>
 				</ul>
+				<div class="mask"></div>
 			</article>
 		</div>
 		<footer class="tab_bar">
