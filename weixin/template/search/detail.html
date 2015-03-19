@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+    <meta name="format-detection"  content="telephone=no">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/zepto.min.js"></script>
+    <script>
+        var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+        Zepto(function($) {
+            if (isIOS) {
+                $('input').on('focus', function() {
+                    $('.tab_bar').css({
+                        'position' : 'absolute',
+                        'top' : $('.container').height() - $('.tab_bar').height() + 'px'
+                    });
+                }).on('blur', function() {
+                    $('.tab_bar').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '0px'
+                    });
+                });
+            }
+            $('.rest_tab > ul > li > a').on('click', function() {
+                if($(this).parent().hasClass('active')){
+                    $(this).parent().removeClass('active');
+                }else{
+                    $('.rest_tab > ul > li').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+                
+            });
+            $('.rest_reviews > ul > li > div > dl > dt > a.action').on('click', function(){
+            	$(this).parent().parent().parent().parent().toggleClass('active');
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+		<div class="gallery">
+			<div>
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+		      	<img src="images/dish.png" />
+	      	</div>
+	    </div>
+	    <div class="rest_info">
+			<dl>
+				<dt>
+					<span class="name">Madison's Restaurant</span>
+				</dt>
+			</dl>
+			<dl>
+				<dt>
+					<img class="star" src="images/star-yellow.png" />
+					<img class="star" src="images/star-yellow.png" />
+					<img class="star" src="images/star-yellow.png" />
+					<img class="star" src="images/star-yellow.png" />
+					<img class="star" src="images/star-grey.png" />
+					<span class="ratings">4020 ratings</span>
+					<span class="price">price pp &yen; 150</span>
+				</dt>
+			</dl>
+		</div>
+		<div class="rest_tab">
+          <ul>
+            <li class="active">
+              <a class="detail" href="javascript:;"> <span>Detail</span> </a>
+            </li>
+            <li>
+              <a class="reviews" href="javascript:;"> <span>Reviews</span> </a>
+            </li>
+            <li>
+              <a class="menu" href="javascript:;"> <span>Menu</span> </a>
+            </li>
+            <li>
+              <a class="coupon" href="javascript:;"> <span>Coupon</span> </a>
+            </li>
+          </ul>
+        </div>
+        <div class="rest_phone">
+        	<a href="tel:02112345678"><span>021 1234 5678</span></a>
+    	</div>
+    	<div class="rest_address">
+        	<a href="javascript:;"><span>Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</span></a>
+    	</div>
+      	<div class="rest_reviews">
+      		<header>
+      			<a href="javascript:;">Reviews</a>
+      		</header>
+	        <ul>
+				<li>
+					<div>
+						<a href="javascript:;"> <img class="avatar" src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a class="name" href="javascript:;">Janet Cheung</a>
+								<a class="action" href="javascript:;"></a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-grey.png" />
+								<span class="time">4020 ratings</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<p class="comment">My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it. When he was younger, he was a member of a small country music b </p>
+							</dt>
+						</dl>
+						<div class="action_list">
+							<a href="javascript:;">Translate</a>
+							<a href="javascript:;">Comment</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="javascript:;"> <img class="avatar" src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a class="name" href="javascript:;">Janet Cheung</a>
+								<a class="action" href="javascript:;"></a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-grey.png" />
+								<span class="time">4020 ratings</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<p class="comment">My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it. When he was younger, he was a member of a small country music b </p>
+							</dt>
+						</dl>
+						<div class="action_list">
+							<a href="javascript:;">Translate</a>
+							<a href="javascript:;">Comment</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="javascript:;"> <img class="avatar" src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a class="name" href="javascript:;">Janet Cheung</a>
+								<a class="action" href="javascript:;"></a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-grey.png" />
+								<span class="time">4020 ratings</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<p class="comment">时光的复刻中只留下了一个又一个叫做日子的东西，而我身处其中，一路跌跌撞撞、风尘仆仆，已经习惯了自己觅食，飞得高且远，虽然总会觉得伤心劳累，但我有着自由的灵魂。</p>
+							</dt>
+						</dl>
+						<div class="action_list">
+							<a href="javascript:;">Translate</a>
+							<a href="javascript:;">Comment</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+      	</div>
+      	<div class="rest_menu">
+      		<header>
+      			<a href="javascript:;">Reviews</a>
+      		</header>
+	        <ul>
+				<li>
+					<div>
+						<a href="javascript:;"> <img src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a href="javascript:;">Madison's Restaurant</a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-grey.png" />
+								<span class="ratings">4020 ratings</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<span class="price">&yen; 150</span>
+								<span class="service menu">Menu</span>
+								<span class="service delivery">Delivery</span>
+								<span class="service coupon">Coupon</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<span class="cuisine">American Cuisine</span>
+								<span class="distance">430m</span>
+							</dt>
+						</dl>
+					</div>
+				</li>
+			</ul>
+      	</div>
+      	<div class="rest_coupon">
+      		<header>
+      			<a href="javascript:;">Reviews</a>
+      		</header>
+	        <ul>
+				<li>
+					<div>
+						<a href="javascript:;"> <img src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a href="javascript:;">Madison's Restaurant</a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-yellow.png" />
+								<img class="star" src="images/star-grey.png" />
+								<span class="ratings">4020 ratings</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<span class="price">&yen; 150</span>
+								<span class="service menu">Menu</span>
+								<span class="service delivery">Delivery</span>
+								<span class="service coupon">Coupon</span>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<span class="cuisine">American Cuisine</span>
+								<span class="distance">430m</span>
+							</dt>
+						</dl>
+					</div>
+				</li>
+			</ul>
+      	</div>
+    </div>
+    <footer class="tab_bar">
+      <ul>
+        <li>
+          <a class="invite" href="javascript:;"><span>Invite</span></a>
+        </li>
+        <li>
+          <a class="review" href="javascript:;"><span>Review</span></a>
+        </li>
+        <li>
+          <a class="wechat active" href="javascript:;"><span>Wechat</span></a>
+        </li>
+        <li>
+          <a class="photos" href="javascript:;"><span>Photos</span></a>
+        </li>
+        <li>
+          <a class="favorite" href="javascript:;"><span>Favorite</span></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
