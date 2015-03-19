@@ -40,6 +40,10 @@
                 }
                 
             });
+            $('.mask').on('click', function(){
+                $('body').removeClass('show_filter');
+                $('.filter > ul > li').removeClass('active');
+            });
         });
     </script>
   </head>
