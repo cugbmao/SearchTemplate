@@ -138,13 +138,14 @@ legend, hr, caption {
 	width: 100%;
 	z-index: 1;
 	position: relative;
+	padding-bottom: 49px;
 }
 .tab_bar {
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
-	height: 46px;
+	height: 49px;
 	z-index: 999;
 	background-color: #FFFEFE;
 	border-top: 1px solid #DDDDDD;
@@ -166,11 +167,22 @@ legend, hr, caption {
 }
 .tab_bar ul li a {
 	width: 100%;
-	height: 45px;
+	height: 48px;
 	display: block;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 22px 22px;
+	vertical-align: bottom;
+	position: relative;
+}
+.tab_bar ul li a span{
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	display: block;
+	width: 100%;
+	bottom: 0px;
+	color: #919191;
 }
 .tab_bar ul li a.news {
 	background-image: url(../images/news-tab.png);
@@ -181,6 +193,31 @@ legend, hr, caption {
 .tab_bar ul li a.me {
 	background-image: url(../images/me-tab.png);
 }
+.tab_bar ul li a.invite {
+	background-size: 14px 24px;
+	background-position: center 5px;
+	background-image: url(../images/invite-tab.png);
+}
+.tab_bar ul li a.review {
+	background-size: 18px 24px;
+	background-position: center 5px;
+	background-image: url(../images/review-tab.png);
+}
+.tab_bar ul li a.wechat {
+	background-size: 27px 23px;
+	background-position: center 5px;
+	background-image: url(../images/wechat-tab.png);
+}
+.tab_bar ul li a.photos {
+	background-size: 27px 25px;
+	background-position: center 5px;
+	background-image: url(../images/photo-tab.png);
+}
+.tab_bar ul li a.favorite {
+	background-size: 25px 24px;
+	background-position: center 5px;
+	background-image: url(../images/fav-tab.png);
+}
 .tab_bar ul li a.news.active {
 	background-image: url(../images/news-tab-active.png);
 }
@@ -189,6 +226,26 @@ legend, hr, caption {
 }
 .tab_bar ul li a.me.active {
 	background-image: url(../images/me-tab-active.png);
+}
+.tab_bar ul li a.invite.active {
+	background-color: #F15C44;
+	background-image: url(../images/invite-tab-active.png);
+}
+.tab_bar ul li a.review.active {
+	background-color: #F15C44;
+	background-image: url(../images/review-tab-active.png);
+}
+.tab_bar ul li a.wechat.active {
+	background-color: #F15C44;
+	background-image: url(../images/wechat-tab-active.png);
+}
+.tab_bar ul li a.photos.active {
+	background-color: #F15C44;
+	background-image: url(../images/photo-tab-active.png);
+}
+.tab_bar ul li a.favorite.active {
+	background-color: #F15C44;
+	background-image: url(../images/fav-tab-active.png);
 }
 .tool_bar {
 	width: 100%;
@@ -262,14 +319,13 @@ legend, hr, caption {
 }
 .rest_list {
 	width: 100%;
-	padding-bottom: 46px;
 	position: relative;
 	z-index: 100;
 }
-.rest_list ul{
+.rest_list > ul{
 	
 }
-.rest_list ul li{
+.rest_list > ul > li{
 	/*display: -webkit-box;
 	display: -moz-box;
 	-webkit-box-orient: horizontal;
@@ -278,32 +334,32 @@ legend, hr, caption {
 	padding: 11px 8px 11px 16px;
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_list ul li > div{
+.rest_list > ul > li > div{
     display: table-cell;
     vertical-align: top;
 }
-.rest_list ul li > div:first-of-type{
+.rest_list > ul > li > div:first-of-type{
 	width: 100px;
 	height: 80px;
 	overflow: hidden;
 }
-.rest_list ul li > div:last-of-type{
+.rest_list > ul > li > div:last-of-type{
 	width: 100%;
 	overflow: hidden;
 }
-.rest_list ul li div a img{
+.rest_list > ul > li > div > a > img{
 	width: 100px;
 	height: 80px;
 }
-.rest_list ul li div dl{
+.rest_list > ul > li > div > dl{
     margin-left:9px;
     overflow:hidden;
 }
-.rest_list ul li div dl dt{
+.rest_list > ul > li > div > dl > dt{
     line-height: 19px;
     position: relative;
 }
-.rest_list ul li div dl dt a{
+.rest_list > ul > li > div > dl > dt > a{
     text-align:left;
     overflow:hidden;
     display:block;
@@ -315,15 +371,15 @@ legend, hr, caption {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.rest_list ul li div dl dt .star{
+.rest_list > ul > li > div > dl > dt > .star{
 	width: 11px;
 	height: 10px;
 }
-.rest_list ul li div dl dt .ratings, .rest_list ul li div dl dt .price{
+.rest_list > ul > li > div > dl > dt > .ratings, .rest_list > ul > li > div > dl > dt > .price{
 	color: #656565;
 	font-size: 14px;
 }
-.rest_list ul li div dl dt .service{
+.rest_list > ul > li > div > dl > dt > .service{
 	font-size: 12px;
 	border-width: 1px;
 	border-radius: 7px;
@@ -331,30 +387,30 @@ legend, hr, caption {
 	padding: 1px 1px;
 	line-height: 16px;
 }
-.rest_list ul li div dl dt .menu{
+.rest_list > ul > li > div > dl > dt > .menu{
 	color: #f5a905;
 	border-color: #f5a905;
 }
-.rest_list ul li div dl dt .delivery{
+.rest_list > ul > li > div > dl > dt > .delivery{
 	color: #95d500;
 	border-color: #95d500;
 }
-.rest_list ul li div dl dt .coupon{
+.rest_list > ul > li > div > dl > dt > .coupon{
 	color: #f15b43;
 	border-color: #f15b43;
 }
-.rest_list ul li div dl dt .cuisine, .rest_list ul li div dl dt .distance{
+.rest_list > ul > li > div > dl > dt > .cuisine, .rest_list > ul > li > div > dl > dt > .distance{
 	color: #999999;
 	font-size: 14px;
 }
-.rest_list ul li div dl dt .cuisine{
+.rest_list > ul > li > div > dl > dt > .cuisine{
 	display: inline-block;
 	white-space: nowrap;
 	width: calc(100% - 50px);
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.rest_list ul li div dl dt .distance{
+.rest_list > ul > li > div > dl > dt > .distance{
 	position: absolute;
 	right: 8px;
 }
@@ -413,4 +469,231 @@ body.show_filter{
 }
 .sub_district_list li a, .district_list li a.active {
     background: #FFFFFF;
+}
+.gallery {
+	width: 100%;
+	height: 96px;
+	overflow-x: scroll;
+	overflow-y: hidden; 
+}
+.gallery > div {
+	width: 1458px;
+}
+.gallery > div > img{
+	width: 139px;
+	height: 96px;
+	margin-right: 3px;
+}
+.gallery > div > img:last-of-type{
+	margin-right: 0px;
+}
+.rest_info{
+	height: 48px;
+	padding: 11px 8px 11px 16px;
+	border-bottom: 1px solid #DDDDDD;
+	overflow: hidden;
+}
+.rest_info dl{
+    line-height: 24px;
+}
+.rest_info dl dt .name{
+    text-align: left;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rest_info dl dt .star{
+	width: 11px;
+	height: 10px;
+}
+.rest_info dl dt .ratings, .rest_info dl dt .price{
+	color: #656565;
+	font-size: 14px;
+}
+.rest_info dl dt .price{
+	margin-left: 30px;
+}
+.rest_tab {
+	height: 49px;
+	font-size: 16px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.rest_tab ul {
+	width: 100%;
+	height: 100%;
+	/*padding: 0 15px;*/
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.rest_tab ul > li {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	text-align: center;
+}
+.rest_tab ul > li.active {
+    border-bottom: 2px solid #F15C44;
+}
+.rest_tab ul > li > a {
+	display: block;
+	height: 49px;
+	line-height: 49px;
+	font-size: 16px;
+}
+.rest_tab ul > li > a > span {
+    color: #999999;
+	padding-right: 15px;
+	background-size: 10px 6px;
+}
+.rest_tab ul > li.active > a > span {
+    color: #F15B43;
+}
+.rest_phone, .rest_address {
+	border-bottom: 1px solid #DDDDDD;
+}
+.rest_phone > a, .rest_address > a {
+	color: #656565;
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 11px 8px 11px 16px;
+}
+.rest_phone > a > span {
+	color: #656565;
+	padding-left: 25px;
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-image: url(../images/phone.png);
+	background-size: 13px 12px;
+}
+.rest_address > a > span {
+	color: #656565;
+	padding-left: 25px;
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-image: url(../images/address.png);
+	background-size: 11px 14px;
+}
+.rest_reviews > header, .rest_menu > header, .rest_coupon > header{
+	background: #F5F2F0;
+	border-bottom: 1px solid #DDDDDD;
+}
+.rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
+	color: #999999;
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 16px 8px 6px 16px;
+}
+.rest_reviews > ul, .rest_menu > ul, .rest_coupon > ul {
+	
+}
+.rest_reviews > ul > li, .rest_menu > ul > li, .rest_coupon > ul > li {
+	height: 89px;
+	padding: 14px 8px 14px 16px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.rest_reviews > ul > li > div{
+    display: table-cell;
+    vertical-align: top;
+}
+.rest_reviews > ul > li > div:first-of-type {
+	width: 36px;
+	overflow: hidden;
+}
+.rest_reviews > ul > li > div:last-of-type{
+	width: 100%;
+	position: relative;
+}
+.rest_reviews > ul > li > div > a > img.avatar {
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+	width: 36px;
+	height: 36px;
+}
+.rest_reviews > ul > li > div > dl{
+    margin-left:9px;
+    overflow:hidden;
+}
+.rest_reviews > ul > li > div > dl > dt{
+    line-height: 19px;
+    position: relative;
+}
+.rest_reviews > ul > li > div > dl > dt > a.name{
+    text-align:left;
+    overflow:hidden;
+    display:block;
+    margin-right: 40px;
+    color: #333333;
+    font-size:16px;
+    line-height: 20px;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rest_reviews > ul > li > div > dl > dt > a.action{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../images/review-action.png);
+	background-size: 17px 10px;
+}
+.rest_reviews > ul > li > div > div.action_list{
+	display: none;
+	position: absolute;
+	top: -5px;
+	right: 30px;
+	width: 130px;
+	height: 31px;
+	background: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+}
+.rest_reviews > ul > li.active > div > div.action_list{
+	display: -webkit-box;
+	display: -moz-box;
+}
+.rest_reviews > ul > li > div > div.action_list > a {
+	font-size: 12px;
+	color: #999999;
+	height: 31px;
+	line-height: 31px;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	display: block;
+	text-align: center;
+}
+.rest_reviews > ul > li > div > div.action_list > a:last-child {
+	border-left: 1px solid #DDDDDD;
+}
+.rest_reviews > ul > li > div > dl > dt > .star{
+	width: 11px;
+	height: 10px;
+}
+.rest_reviews > ul > li > div > dl > dt > .time{
+	color: #999999;
+	font-size: 14px;
+}
+.rest_reviews > ul > li > div > dl > dt > .comment{
+ 	color: #656565;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
