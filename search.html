@@ -17,9 +17,10 @@
         Zepto(function($) {
             if (isIOS) {
                 $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
                     $('.tab_bar').css({
                         'position' : 'absolute',
-                        'top' : $('.container').height() - $('.tab_bar').height() + 'px'
+                        'top' : height - $('.tab_bar').height() + 'px'
                     });
                 }).on('blur', function() {
                     $('.tab_bar').css({

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Search</title>
+    <title>Detail</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,9 +17,10 @@
         Zepto(function($) {
             if (isIOS) {
                 $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
                     $('.tab_bar').css({
                         'position' : 'absolute',
-                        'top' : $('.container').height() - $('.tab_bar').height() + 'px'
+                        'top' : height - $('.tab_bar').height() + 'px'
                     });
                 }).on('blur', function() {
                     $('.tab_bar').css({
@@ -205,90 +206,80 @@
       	</div>
       	<div class="rest_menu">
       		<header>
-      			<a href="javascript:;">Reviews</a>
+      			<a href="javascript:;">Menu</a>
       		</header>
 	        <ul>
 				<li>
 					<div>
-						<a href="javascript:;"> <img src="images/rest.png" /> </a>
+						<a href="javascript:;"> <img class="dish" src="images/rest.png" /> </a>
 					</div>
 					<div>
 						<dl>
 							<dt>
-								<a href="javascript:;">Madison's Restaurant</a>
+								<a class="en_name" href="javascript:;">Lime Citron</a>
 							</dt>
 						</dl>
 						<dl>
 							<dt>
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-grey.png" />
-								<span class="ratings">4020 ratings</span>
+								<a class="cn_name" href="javascript:;">青柠柚子茶</a>
+							</dt>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="javascript:;"> <img class="dish" src="images/rest.png" /> </a>
+					</div>
+					<div>
+						<dl>
+							<dt>
+								<a class="en_name" href="javascript:;">Lime Citron</a>
 							</dt>
 						</dl>
 						<dl>
 							<dt>
-								<span class="price">&yen; 150</span>
-								<span class="service menu">Menu</span>
-								<span class="service delivery">Delivery</span>
-								<span class="service coupon">Coupon</span>
-							</dt>
-						</dl>
-						<dl>
-							<dt>
-								<span class="cuisine">American Cuisine</span>
-								<span class="distance">430m</span>
+								<a class="cn_name" href="javascript:;">青柠柚子茶</a>
 							</dt>
 						</dl>
 					</div>
 				</li>
 			</ul>
+			<footer>
+				<a href="javascript:;"><span>View All Menu</span></a>
+			</footer>
       	</div>
       	<div class="rest_coupon">
       		<header>
-      			<a href="javascript:;">Reviews</a>
+      			<a href="javascript:;">Coupon</a>
       		</header>
 	        <ul>
 				<li>
 					<div>
-						<a href="javascript:;"> <img src="images/rest.png" /> </a>
+						<a href="javascript:;"> <img class="coupon_img" src="images/rest.png" /> </a>
 					</div>
 					<div>
 						<dl>
 							<dt>
-								<a href="javascript:;">Madison's Restaurant</a>
+								<a class="name" href="javascript:;">Couplue Dinner</a>
 							</dt>
 						</dl>
 						<dl>
 							<dt>
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-yellow.png" />
-								<img class="star" src="images/star-grey.png" />
-								<span class="ratings">4020 ratings</span>
-							</dt>
-						</dl>
-						<dl>
-							<dt>
-								<span class="price">&yen; 150</span>
-								<span class="service menu">Menu</span>
-								<span class="service delivery">Delivery</span>
-								<span class="service coupon">Coupon</span>
-							</dt>
-						</dl>
-						<dl>
-							<dt>
-								<span class="cuisine">American Cuisine</span>
-								<span class="distance">430m</span>
+								<a class="discount_price" href="javascript:;">&yen; 150</a>
+								<a class="origin_price" href="javascript:;">&yen; 150</a>
 							</dt>
 						</dl>
 					</div>
 				</li>
 			</ul>
+			<footer>
+				<a href="javascript:;"><span>View 1 more Coupon</span></a>
+			</footer>
       	</div>
+      	<div class="rest_other">
+      		<header>
+      		</header>
+  		</div>
     </div>
     <footer class="tab_bar">
       <ul>
@@ -296,7 +287,7 @@
           <a class="invite" href="javascript:;"><span>Invite</span></a>
         </li>
         <li>
-          <a class="review" href="javascript:;"><span>Review</span></a>
+          <a class="review" href="review.html"><span>Review</span></a>
         </li>
         <li>
           <a class="wechat active" href="javascript:;"><span>Wechat</span></a>
