@@ -42,6 +42,14 @@
             $('.rest_reviews > ul > li > div > dl > dt > a.action').on('click', function(){
             	$(this).parent().parent().parent().parent().toggleClass('active');
             });
+            $('.rest_taxi_card > a').on('click', function(){
+            	$('body').addClass('show_filter');
+            	$('.taxi_card').show();
+            });
+            $('.taxi_card > .tip_close').on('click', function(){
+            	$('body').removeClass('show_filter');
+            	$('.taxi_card').hide();
+            });
         });
     </script>
   </head>
@@ -88,7 +96,7 @@
               <a class="reviews" href="javascript:;"> <span>Reviews</span> </a>
             </li>
             <li>
-              <a class="menu" href="javascript:;"> <span>Menu</span> </a>
+              <a class="menu" href="menu.html"> <span>Menu</span> </a>
             </li>
             <li>
               <a class="coupon" href="javascript:;"> <span>Coupon</span> </a>
@@ -101,6 +109,30 @@
     	<div class="rest_address">
         	<a href="javascript:;"><span>Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</span></a>
     	</div>
+    	<div class="rest_taxi_card">
+        	<a href="javascript:;"><span>Taxi Card</span></a>
+    	</div>
+    	<div class="rest_invite">
+      		<header>
+      			<a href="javascript:;">Invite</a>
+      		</header>
+	        <ul>
+				<li>
+					<div>
+						<dl>
+							<dt>
+								<a class="invite_name" href="javascript:;">Foolish Day Party</a>
+							</dt>
+						</dl>
+						<dl>
+							<dt>
+								<a class="invite_date" href="javascript:;">2014-04-01</a>
+							</dt>
+						</dl>
+					</div>
+				</li>
+			</ul>
+      	</div>
       	<div class="rest_reviews">
       		<header>
       			<a href="javascript:;">Reviews</a>
@@ -132,10 +164,10 @@
 								<p class="comment">My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it. When he was younger, he was a member of a small country music b </p>
 							</dt>
 						</dl>
-						<div class="action_list">
+						<!-- <div class="action_list">
 							<a href="javascript:;">Translate</a>
 							<a href="javascript:;">Comment</a>
-						</div>
+						</div> -->
 					</div>
 				</li>
 				<li>
@@ -164,10 +196,10 @@
 								<p class="comment">My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it. When he was younger, he was a member of a small country music b </p>
 							</dt>
 						</dl>
-						<div class="action_list">
+						<!-- <div class="action_list">
 							<a href="javascript:;">Translate</a>
 							<a href="javascript:;">Comment</a>
-						</div>
+						</div> -->
 					</div>
 				</li>
 				<li>
@@ -196,10 +228,11 @@
 								<p class="comment">时光的复刻中只留下了一个又一个叫做日子的东西，而我身处其中，一路跌跌撞撞、风尘仆仆，已经习惯了自己觅食，飞得高且远，虽然总会觉得伤心劳累，但我有着自由的灵魂。</p>
 							</dt>
 						</dl>
-						<div class="action_list">
+						<!-- <div class="action_list">
 							<a href="javascript:;">Translate</a>
 							<a href="javascript:;">Comment</a>
-						</div>
+						</div> -->
+						<a class="translate" href="javascript:;">Translate</a>
 					</div>
 				</li>
 			</ul>
@@ -300,5 +333,19 @@
         </li>
       </ul>
     </footer>
+    <div class="mask"></div>
+    <div class="taxi_card tip_panel">
+    	<div class="tip_content">
+    		<div class="tip">
+    			<div class="tip_title">TAXI CARD</div>
+    			<div class="tip_subtitle">Show this to the taxi driver</div>
+    			<div class="tip_address_cn">长宁路1018号<br />龙之梦购物中心8楼<br />（近凯旋路）</div>
+    			<div class="tip_address_en">Changning Road No.1018<br />Longzhimeng Shopping Mall 8th floor<br />(Kaixuan Road)</div>
+    		</div>
+    	</div>
+    	<a class="tip_close">
+    		<img src="images/close.png" />
+    	</a>
+    </div>
   </body>
 </html>

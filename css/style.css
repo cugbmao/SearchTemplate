@@ -185,12 +185,15 @@ legend, hr, caption {
 	color: #919191;
 }
 .tab_bar ul li a.news {
+	background-size: 20.5px 23px;
 	background-image: url(../images/news-tab.png);
 }
 .tab_bar ul li a.search {
+	background-size: 22px 22.5px;
 	background-image: url(../images/search-tab.png);
 }
 .tab_bar ul li a.me {
+	background-size: 20.5px 22.5px;
 	background-image: url(../images/me-tab.png);
 }
 .tab_bar ul li a.invite {
@@ -256,6 +259,28 @@ legend, hr, caption {
 	height: 49px;
 	line-height: 49px;
 }
+.tab_bar > div.order_count {
+	color: #656565;
+	display: block;
+	float: left;
+	height: 100%;
+	text-align: center;
+	line-height: 49px;
+	font-size: 16px;
+	margin-left: 15px;
+}
+.tab_bar > a.start_order {
+	background: #F15B43;
+	color: #FFFFFF;
+	display: block;
+	float: right;
+	width: 69px;
+	height: 100%;
+	text-align: center;
+	line-height: 49px;
+	font-size: 16px;
+}
+
 .tool_bar {
 	width: 100%;
 	z-index: 200;
@@ -425,15 +450,16 @@ legend, hr, caption {
 }
 body.show_filter{
 	/*overflow: hidden;*/
+	height: auto;
 }
-.show_filter .rest_list .mask {
+.show_filter .mask {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	background: rgba(0,0,0,.4);
-	z-index: 199;
+	z-index: 9999;
 }
 .filter_list {
 	background: #FFFFFF;
@@ -560,16 +586,14 @@ body.show_filter{
 }
 .rest_tab ul > li > a > span {
     color: #999999;
-	padding-right: 15px;
-	background-size: 10px 6px;
 }
 .rest_tab ul > li.active > a > span {
     color: #F15B43;
 }
-.rest_phone, .rest_address {
+.rest_phone, .rest_address, .rest_taxi_card{
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_phone > a, .rest_address > a {
+.rest_phone > a, .rest_address > a, .rest_taxi_card > a {
 	color: #656565;
 	display: block;
 	height: 23px;
@@ -582,7 +606,7 @@ body.show_filter{
 	background-position: center left;
 	background-repeat: no-repeat;
 	background-image: url(../images/phone.png);
-	background-size: 13px 12px;
+	background-size: 16px 14px;
 }
 .rest_address > a > span {
 	color: #656565;
@@ -590,25 +614,33 @@ body.show_filter{
 	background-position: center left;
 	background-repeat: no-repeat;
 	background-image: url(../images/address.png);
-	background-size: 11px 14px;
+	background-size: 13px 16px;
 }
-.rest_reviews > header, .rest_menu > header, .rest_coupon > header, .rest_other > header{
+.rest_taxi_card > a > span {
+	color: #656565;
+	padding-left: 25px;
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-image: url(../images/taxi.png);
+	background-size: 15px 16px;
+}
+.rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .rest_other > header{
 	background: #F5F2F0;
 	border-bottom: 1px solid #DDDDDD;
 	height: 45px;
 }
-.rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
+.rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
 	color: #999999;
 	display: block;
 	height: 23px;
 	line-height: 23px;
 	padding: 16px 16px 6px 16px;
 }
-.rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer{
+.rest_invite > footer, .rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer{
 	background: #FFFFFF;
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a {
+.rest_invite > footer > a, .rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a {
 	color: #999999;
 	display: block;
 	height: 23px;
@@ -632,7 +664,7 @@ body.show_filter{
 	background-image: url(../images/arrow-down.png);
 	background-size: 12px 7px;
 }
-.rest_reviews > ul, .rest_menu > ul, .rest_coupon > ul {
+.rest_invite > ul, .rest_reviews > ul, .rest_menu > ul, .rest_coupon > ul {
 	
 }
 .rest_reviews > ul > li {
@@ -640,12 +672,12 @@ body.show_filter{
 	padding: 14px 16px 14px 16px;
 	border-bottom: 1px solid #DDDDDD;
 }
- .rest_menu > ul > li, .rest_coupon > ul > li {
+ .rest_invite > ul > li, .rest_menu > ul > li, .rest_coupon > ul > li {
  	height: 44px;
 	padding: 11px 16px 11px 16px;
 	border-bottom: 1px solid #DDDDDD;
  }
-.rest_reviews > ul > li > div, .rest_menu > ul > li > div, .rest_coupon > ul > li > div{
+.rest_invite > ul > li > div, .rest_reviews > ul > li > div, .rest_menu > ul > li > div, .rest_coupon > ul > li > div{
     display: table-cell;
     vertical-align: top;
 }
@@ -657,7 +689,7 @@ body.show_filter{
 	width: 60px;
 	overflow: hidden;
 }
-.rest_reviews > ul > li > div:last-of-type, .rest_coupon > ul > li > div:last-of-type {
+.rest_invite > ul > li > div:last-of-type, .rest_reviews > ul > li > div:last-of-type, .rest_coupon > ul > li > div:last-of-type {
 	width: 100%;
 	position: relative;
 }
@@ -684,7 +716,7 @@ body.show_filter{
     line-height: 19px;
     position: relative;
 }
-.rest_menu > ul > li > div > dl > dt, .rest_coupon > ul > li > div > dl > dt {
+.rest_invite > ul > li > div > dl > dt, .rest_menu > ul > li > div > dl > dt, .rest_coupon > ul > li > div > dl > dt {
     line-height: 22px;
     position: relative;
 }
@@ -711,6 +743,29 @@ body.show_filter{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.rest_invite > ul > li > div > dl > dt > a.invite_name {
+	text-align:left;
+    overflow:hidden;
+    display:block;
+    color: #333333;
+    font-size:16px;
+    line-height: 22px;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rest_invite > ul > li > div > dl > dt > a.invite_date {
+	text-align:left;
+    overflow:hidden;
+    display:block;
+	color: #999999;
+	font-size:14px;
+	line-height: 22px;
+	word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .rest_menu > ul > li > div > dl > dt > a.cn_name {
 	color: #999999;
 	background-position: center right;
@@ -730,7 +785,8 @@ body.show_filter{
 	font-size: 14px;
 	text-decoration:line-through;
  }
-.rest_reviews > ul > li > div > dl > dt > a.action{
+/*.rest_reviews > ul > li > div > dl > dt > a.action{
+	display: none;
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -768,6 +824,13 @@ body.show_filter{
 }
 .rest_reviews > ul > li > div > div.action_list > a:last-child {
 	border-left: 1px solid #DDDDDD;
+}*/
+.rest_reviews > ul > li > div > a.translate{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-size: 14px;
+	color: #999999;
 }
 .rest_reviews > ul > li > div > dl > dt > .star{
 	width: 11px;
@@ -811,4 +874,174 @@ body.show_filter{
 .review_4_step > textarea {
 	width: 100%;
 	min-height: 100px;
+}
+.review_4_step > .review_words_limit {
+	color: #F15B43;
+	font-size: 16px;
+}
+.review_5_step {
+	padding: 16px;
+}
+.review_5_step > .review_photo > img {
+	width: 56px;
+	height: 56px;
+	padding: 5px;
+}
+.review_5_step > a.add_photo {
+	color: #656565;
+	font-size: 16px;
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.tip_panel {
+	position: fixed;
+	top: 60px;
+	left: 50%;
+	z-index: 12;
+	width: 80%;
+	margin-left: -40%;
+	background: #FFF;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-moz-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-ms-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-o-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	display: none;
+	z-index: 10000;
+}
+
+.tip_panel .tip_content {
+	text-align: center;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tip_panel .tip_close {
+	display: block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.tip_panel .tip_close img {
+	width: 100%;
+	height: 100%;
+}
+
+.tip_panel .tip_content .tip {
+	padding: 30px;
+}
+
+.tip_panel .tip_content .tip .tip_title {
+	font-size: 18px;
+	color: #656565;
+	line-height: 20px;
+}
+
+.tip_panel .tip_content .tip .tip_subtitle {
+	font-size: 14px;
+	color: #F5A905;
+	line-height: 20px;
+}
+
+.tip_panel .tip_content .tip .tip_address_cn {
+	font-size: 23px;
+	color: #656565;
+	line-height: 30px;
+	padding: 20px 0px;
+}
+
+.tip_panel .tip_content .tip .tip_address_en {
+	font-size: 14px;
+	color: #999999;
+	line-height: 18px;
+	padding: 20px 0px;
+}
+.dish_list {
+	position: relative;
+	z-index: 100;
+}
+.dish_list:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+.dish_list > .dish_item{
+	width: 50%;
+	float: left;
+	margin-top: 15px;
+	position: relative;
+	min-height: 1px;
+	border-bottom: 1px solid #ddd;
+}
+
+.dish_list > .dish_item > .dish_info {
+	padding: 0px 15px 10px;
+}
+
+.dish_list > .dish_item > .dish_info > img {
+	display: inline-block;
+	/* border-radius: 50%; */
+	background-size: cover;
+	background-position: center;
+	max-width: 100%;
+	height: auto;
+}
+.dish_list > .dish_item > .dish_info > .dish_name {
+	color: #333333;
+	font-size: 16px;
+	line-height: 30px;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action {
+	float: left;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_price {
+	float: right;
+	color: #999999;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_minus {
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-image: url(../images/minus.png);
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_plus {
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-image: url(../images/plus.png);
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+}
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_count {
+	display: inline-block;
+	min-width: 40px;
+	text-align: center;
+	line-height: 20px;
+	vertical-align: top;
+	color: #999999;
 }
