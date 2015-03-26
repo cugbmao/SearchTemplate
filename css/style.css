@@ -250,7 +250,7 @@ legend, hr, caption {
 	background-color: #F15C44;
 	background-image: url(../images/fav-tab-active.png);
 }
-.tab_bar > a.btn_add_review {
+.tab_bar > a.btn_add_review, .tab_bar > a.btn_add_invite, .tab_bar > a.btn_share_invite {
 	display: block;
 	color: #FFFFFF;
 	background: #F15C44;
@@ -258,6 +258,22 @@ legend, hr, caption {
 	font-size: 16px;
 	height: 49px;
 	line-height: 49px;
+}
+.tab_bar > a.btn_accept_invite, .tab_bar > a.btn_decline_invite {
+	display: block;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+	height: 49px;
+	line-height: 49px;
+	width: 50%;
+	float: left;
+}
+.tab_bar > a.btn_accept_invite {
+	background: #F15C44;
+}
+.tab_bar > a.btn_decline_invite {
+	background: #999999;
 }
 .tab_bar > div.order_count {
 	color: #656565;
@@ -1044,4 +1060,140 @@ body.show_filter{
 	line-height: 20px;
 	vertical-align: top;
 	color: #999999;
+}
+.invite_group {
+	height: 50px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 14px 16px;
+}
+.invite_group > p, .invite_group > input, .invite_group > textarea   {
+	font-size: 16px;
+	color: #656565;
+	height: 25px;
+	line-height: 25px;
+	width: 100%;
+}
+.invite_group.more {
+	border-bottom: none;
+}
+.invite_group.more > textarea {
+	min-height: 100px;
+}
+
+.invite_title {
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 14px 16px;
+	font-size: 22px;
+	color: #333333;
+	font-weight: bold;
+}
+.invite_info_group {
+	height: 50px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 14px 16px;
+}
+.invite_info_group > p {
+	font-size: 16px;
+	color: #333333;
+	height: 25px;
+	line-height: 25px;
+	width: 100%;
+}
+.invite_info_group > p.invite_info {
+	color: #656565;
+}
+.invite_info_group.more {
+	border-bottom: none;
+}
+
+.invite_rest_info {
+	position: fixed;
+	left: 0px;
+	bottom: 50px;
+	z-index: 999;
+	height: 82px;
+	padding: 11px 8px 11px 16px;
+	border-top: 1px solid #DDDDDD;
+}
+.invite_rest_info > div{
+    display: table-cell;
+    vertical-align: top;
+}
+.invite_rest_info > div:first-of-type{
+	width: 100px;
+	height: 80px;
+	overflow: hidden;
+}
+.invite_rest_info > div:last-of-type{
+	width: 100%;
+	overflow: hidden;
+}
+.invite_rest_info > div > a > img{
+	width: 100px;
+	height: 80px;
+}
+.invite_rest_info > div > dl{
+    margin-left:9px;
+    overflow:hidden;
+}
+.invite_rest_info > div > dl > dt{
+    line-height: 19px;
+    position: relative;
+}
+.invite_rest_info > div > dl > dt > a{
+    text-align:left;
+    overflow:hidden;
+    display:block;
+    width:100%;
+    color: #333333;
+    font-size:20px;
+    line-height: 20px;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invite_rest_info > div > dl > dt > .star{
+	width: 11px;
+	height: 10px;
+}
+.invite_rest_info > div > dl > dt > .ratings, .invite_rest_info > div > dl > dt > .price{
+	color: #656565;
+	font-size: 14px;
+}
+.invite_rest_info > div > dl > dt > .service{
+	font-size: 12px;
+	border-width: 1px;
+	border-radius: 7px;
+	border-style:solid;
+	padding: 1px 1px;
+	line-height: 16px;
+}
+.invite_rest_info > div > dl > dt > .menu{
+	color: #f5a905;
+	border-color: #f5a905;
+}
+.invite_rest_info > div > dl > dt > .delivery{
+	color: #95d500;
+	border-color: #95d500;
+}
+.invite_rest_info > div > dl > dt > .coupon{
+	color: #f15b43;
+	border-color: #f15b43;
+}
+.invite_rest_info > div > dl > dt > .cuisine, .invite_rest_info > div > dl > dt > .distance{
+	color: #999999;
+	font-size: 14px;
+}
+.invite_rest_info > div > dl > dt > .cuisine{
+	display: inline-block;
+	white-space: nowrap;
+	width: calc(100% - 50px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.invite_rest_info > div > dl > dt > .distance{
+	position: absolute;
+	right: 8px;
 }

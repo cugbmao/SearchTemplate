@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Review</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+    <meta name="format-detection"  content="telephone=no">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/zepto.min.js"></script>
+    <script>
+        var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+        Zepto(function($) {
+            if (isIOS) {
+                $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
+                    $('.tab_bar').css({
+                        'position' : 'absolute',
+                        'top' : height - $('.tab_bar').height() + 'px'
+                    });
+                    $('.invite_rest_info').css({
+                        'position' : 'absolute',
+                        'top' : height - $('.tab_bar').height() - $('.invite_rest_info').height() + 'px'
+                    });
+                }).on('blur', function() {
+                    $('.tab_bar').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '0px'
+                    });
+                    $('.invite_rest_info').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '50px'
+                    });
+                });
+            }
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="invite_group">
+      	<p>TITLE</p>
+      	<input type="text" placeholder="Madison's Restaurant..." />
+      </div>
+      <div class="invite_group">
+      	<p>TIME</p>
+      	<input type="text" placeholder="Tap to select" />
+      </div>
+      <div class="invite_group more">
+      	<p>DESCRIPTION</p>
+      	<textarea placeholder="Type..."></textarea>
+      </div>
+    </div>
+	<div class="invite_rest_info">
+	    <div>
+	      <a href="detail.html"> <img src="images/rest.png" /> </a>
+	    </div>
+	    <div>
+	      <dl>
+	        <dt>
+	          <a href="detail.html">Madison's Restaurant</a>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-grey.png" />
+	          <span class="ratings">4020 ratings</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="price">&yen; 150</span>
+	          <span class="service menu">Menu</span>
+	          <span class="service delivery">Delivery</span>
+	          <span class="service coupon">Coupon</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="cuisine">American Cuisine</span>
+	          <span class="distance">430m</span>
+	        </dt>
+	      </dl>
+	    </div>
+	  </div>
+    <footer class="tab_bar">
+      <a class="btn_add_invite">Save Invitation</a>
+    </footer>
+  </body>
+</html>
