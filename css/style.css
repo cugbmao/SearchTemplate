@@ -134,6 +134,9 @@ legend, hr, caption {
 	color: #DDDDDD !important;
 }
 
+.hide {
+	display: none;
+}
 .container {
 	width: 100%;
 	z-index: 1;
@@ -385,16 +388,17 @@ legend, hr, caption {
 	border-bottom: 1px solid #DDDDDD;
 }
 .rest_list > ul > li > div{
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: top;
 }
 .rest_list > ul > li > div:first-of-type{
 	width: 100px;
 	height: 80px;
 	overflow: hidden;
+	float: left;
 }
 .rest_list > ul > li > div:last-of-type{
-	width: 100%;
+	/*width: 100%;*/
 	overflow: hidden;
 }
 .rest_list > ul > li > div > a > img{
@@ -493,7 +497,7 @@ body.show_filter{
 	border-right: 1px solid #DDDDDD;
 }
 .filter_list > ol:last-of-type {
-	width: 56.1%;
+	width: 56%;
 	float: left;
 }
 .cuisine_list, .sort_list {
@@ -612,11 +616,12 @@ body.show_filter{
 .rest_phone > a, .rest_address > a, .rest_taxi_card > a {
 	color: #656565;
 	display: block;
-	height: 23px;
+	min-height: 23px;
 	line-height: 23px;
 	padding: 11px 8px 11px 16px;
 }
 .rest_phone > a > span {
+	display: block;
 	color: #656565;
 	padding-left: 25px;
 	background-position: center left;
@@ -625,6 +630,7 @@ body.show_filter{
 	background-size: 16px 14px;
 }
 .rest_address > a > span {
+	display: block;
 	color: #656565;
 	padding-left: 25px;
 	background-position: center left;
@@ -633,6 +639,7 @@ body.show_filter{
 	background-size: 13px 16px;
 }
 .rest_taxi_card > a > span {
+	display: block;
 	color: #656565;
 	padding-left: 25px;
 	background-position: center left;
@@ -1035,7 +1042,7 @@ body.show_filter{
 	clear: both;
 	display: block;
 }
-.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_minus {
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_minus, .order_item > p > .dish_minus {
 	width: 20px;
 	height: 20px;
 	background-repeat: no-repeat;
@@ -1044,7 +1051,7 @@ body.show_filter{
 	background-size: cover;
 	display: inline-block;
 }
-.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_plus {
+.dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_plus, .order_item > p > .dish_plus {
 	width: 20px;
 	height: 20px;
 	background-repeat: no-repeat;
@@ -1055,7 +1062,7 @@ body.show_filter{
 }
 .dish_list > .dish_item > .dish_info > .dish_action_group > .dish_action > .dish_count {
 	display: inline-block;
-	min-width: 40px;
+	min-width: 24px;
 	text-align: center;
 	line-height: 20px;
 	vertical-align: top;
@@ -1111,6 +1118,7 @@ body.show_filter{
 .invite_rest_info {
 	position: fixed;
 	left: 0px;
+	right: 0px;
 	bottom: 50px;
 	z-index: 999;
 	height: 82px;
@@ -1118,16 +1126,17 @@ body.show_filter{
 	border-top: 1px solid #DDDDDD;
 }
 .invite_rest_info > div{
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: top;
 }
 .invite_rest_info > div:first-of-type{
 	width: 100px;
 	height: 80px;
 	overflow: hidden;
+	float: left;
 }
 .invite_rest_info > div:last-of-type{
-	width: 100%;
+	/*width: 100%;*/
 	overflow: hidden;
 }
 .invite_rest_info > div > a > img{
@@ -1196,4 +1205,58 @@ body.show_filter{
 .invite_rest_info > div > dl > dt > .distance{
 	position: absolute;
 	right: 8px;
+}
+.order_list_title {
+	height: 50px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 7px 16px;
+}
+.order_list_title > p {
+	text-align: center;
+	font-size:  17px;
+	color: #656565;
+	line-height: 25px;
+}
+.order_list_title > p.subtitle {
+	font-size: 14px;
+	color: #F5A905;
+}
+.order_item {
+	min-height: 25px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 10px 16px;
+}
+.order_item > p {
+	font-size: 16px;
+	color: #656565;
+	line-height: 25px;
+	height: 25px;
+}
+.order_item > p > span.item_name {
+	display: block;
+	max-width: 80%;
+	float: left;
+	word-break: break-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.order_item > p > a.item_count {
+	float: right;
+	color: #656565;
+}
+.order_item > p > .dish_plus {
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin-right: 25px;
+}
+.order_item > p > .dish_minus {
+	width: 25px;
+	height: 25px;
+	float: right;
+}
+.order_item > p:after {
+	content: " ";
+	clear: both;
 }
