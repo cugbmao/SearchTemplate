@@ -468,11 +468,11 @@ legend, hr, caption {
 	position: absolute;
 	right: 8px;
 }
-body.show_filter{
+body.show_mask{
 	/*overflow: hidden;*/
 	height: auto;
 }
-.show_filter .mask {
+.show_mask .mask {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -924,7 +924,6 @@ body.show_filter{
 	position: fixed;
 	top: 60px;
 	left: 50%;
-	z-index: 12;
 	width: 80%;
 	margin-left: -40%;
 	background: #FFF;
@@ -995,6 +994,158 @@ body.show_filter{
 	line-height: 18px;
 	padding: 20px 0px;
 }
+
+.invite_panel {
+	position: fixed;
+	top: 60px;
+	left: 20px;
+	right: 20px;
+	z-index: 12;
+	min-height: 360px;
+	display: none;
+	z-index: 10000;
+}
+
+.invite_panel > .invite_bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #F3BE07;
+	transform: rotate(3deg) translateZ(0);
+	-ms-transform:rotate(3deg) translateZ(0);
+	-moz-transform:rotate(3deg) translateZ(0);
+	-webkit-transform:rotate(3deg) translateZ(0);
+	-o-transform:rotate(3deg) translateZ(0);
+}
+.invite_panel > .panel_content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #FFFFFF;
+	padding: 10px;
+	-webkit-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-moz-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-ms-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	-o-box-shadow: rgba(0,0,0,.4) 0 0 20px;
+	box-shadow: rgba(0,0,0,.4) 0 0 20px;
+}
+.invite_panel > .panel_content > .invite_name {
+	color: #333333;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	padding: 10px 0px;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 55px;
+	height: 82px;
+	padding: 11px 0px;
+	border-top: 1px solid #DDDDDD;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div{
+    vertical-align: top;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div:first-of-type{
+	width: 100px;
+	height: 80px;
+	overflow: hidden;
+	float: left;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div:last-of-type{
+	/*width: 100%;*/
+	overflow: hidden;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > a > img{
+	width: 100px;
+	height: 80px;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl{
+    margin-left:9px;
+    overflow:hidden;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt{
+    line-height: 19px;
+    position: relative;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > a{
+    text-align:left;
+    overflow:hidden;
+    display:block;
+    width:100%;
+    color: #333333;
+    font-size:20px;
+    line-height: 20px;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .star{
+	width: 11px;
+	height: 10px;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .ratings, .invite_panel > .panel_content  > .invite_panel_rest_info > div > dl > dt > .price{
+	color: #656565;
+	font-size: 14px;
+}
+.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .cuisine{
+	color: #999999;
+	font-size: 14px;
+	white-space: nowrap;
+	width: calc(100% - 50px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media screen and (max-width: 360px) {
+	.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .cuisine, .invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .ratings{
+		float: right;
+	}
+}
+.invite_panel > .panel_content > .invite_action {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 49px;
+	background-color: #FFFEFE;
+}
+.invite_panel > .panel_content > .invite_action > a.btn_accept, .invite_panel > .panel_content > .invite_action > a.btn_decline {
+	display: block;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+	height: 49px;
+	line-height: 49px;
+	width: 50%;
+	float: left;
+}
+.invite_panel > .panel_content > .invite_action > a.btn_accept {
+	background: #F15C44;
+}
+.invite_panel > .panel_content > .invite_action > a.btn_decline {
+	background: #999999;
+}
+.invite_panel > .panel_content > .invite_sub {
+	position: relative;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_address {
+	position: absolute;
+	left: 0px;
+	right: 135px;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_time {
+	width: 135px;
+	float: right;
+}
+
 .dish_list {
 	position: relative;
 	z-index: 100;
@@ -1208,7 +1359,7 @@ body.show_filter{
 }
 .order_list_title {
 	height: 50px;
-	border-bottom: 1px solid #DDDDDD;
+	/*border-bottom: 1px solid #DDDDDD;*/
 	padding: 7px 16px;
 }
 .order_list_title > p {
@@ -1216,6 +1367,22 @@ body.show_filter{
 	font-size:  17px;
 	color: #656565;
 	line-height: 25px;
+}
+.order_list_title_separator {
+	height: 7px;
+	background-image: url(../images/orderlist_separator.png);
+	background-repeat: repeat-x;
+}
+.order_list_tip {
+	height: 30px;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 15px 16px;
+}
+.order_list_tip > p {
+	text-align: center;
+	font-size:  19px;
+	color: #333333;
+	line-height: 30px;
 }
 .order_list_title > p.subtitle {
 	font-size: 14px;
@@ -1232,7 +1399,18 @@ body.show_filter{
 	line-height: 25px;
 	height: 25px;
 }
-.order_item > p > span.item_name {
+.order_item > p > .item_cn_name {
+	display: block;
+	max-width: 70%;
+	float: left;
+	word-break: break-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.order_item > p > .item_en_name {
+	color: #999999;
+	font-size: 14px;
 	display: block;
 	max-width: 80%;
 	float: left;
@@ -1241,7 +1419,12 @@ body.show_filter{
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.order_item > p > a.item_count {
+.order_item > p > .item_count {
+	float: right;
+	color: #656565;
+	margin-right: 15px;
+}
+.order_item > p > .item_price {
 	float: right;
 	color: #656565;
 }
@@ -1259,4 +1442,22 @@ body.show_filter{
 .order_item > p:after {
 	content: " ";
 	clear: both;
+}
+.order_request {
+	min-height: 25px;
+	padding: 10px 16px;
+}
+.order_request > p {
+	font-size: 16px;
+	color: #656565;
+	line-height: 25px;
+	height: 25px;
+}
+.order_request > p.subtitle {
+	color: #999999;
+	font-size: 14px;
+}
+.order_request > textarea {
+	width: 100%;
+	min-height: 50px;
 }

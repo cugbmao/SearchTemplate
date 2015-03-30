@@ -43,12 +43,16 @@
             	$(this).parent().parent().parent().parent().toggleClass('active');
             });
             $('.rest_taxi_card > a').on('click', function(){
-            	$('body').addClass('show_filter');
+            	$('body').addClass('show_mask');
             	$('.taxi_card').show();
             });
             $('.taxi_card > .tip_close').on('click', function(){
-            	$('body').removeClass('show_filter');
+            	$('body').removeClass('show_mask');
             	$('.taxi_card').hide();
+            });
+            $('.invite_name').on('click', function(){
+            	$('body').addClass('show_mask');
+            	$('.invite_panel').show();
             });
         });
     </script>
@@ -121,7 +125,7 @@
 					<div>
 						<dl>
 							<dt>
-								<a class="invite_name" href="inviteShare.html">Foolish Day Party</a>
+								<a class="invite_name" href="javascript:;">Foolish Day Party</a>
 							</dt>
 						</dl>
 						<dl>
@@ -346,6 +350,63 @@
     	<a class="tip_close">
     		<img src="images/close.png" />
     	</a>
+    </div>
+    <div class="invite_panel">
+    	<div class="invite_bg"></div>
+    	<div class="panel_content">
+    		<div class="invite_name">Foolish Day Party</div>
+    		<div class="invite_sub">
+    			<div class="invite_address">
+    				<dl>
+    					<dt>ADDRESS</dt>
+    				</dl>
+    				<dl>
+    					<dt>Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</dt>
+    				</dl>
+    			</div>
+    			<div class="invite_time">
+    				<dl>
+    					<dt>TIME</dt>
+    				</dl>
+    				<dl>
+    					<dt>2015/12/12 19:00</dt>
+    				</dl>
+    			</div>
+    		</div>
+    		<div class="invite_desc"></div>
+			<div class="invite_panel_rest_info">
+				<div>
+					<a href="detail.html"> <img src="images/rest.png" /> </a>
+				</div>
+				<div>
+					<dl>
+						<dt>
+							<a href="detail.html">Madison's Restaurant</a>
+						</dt>
+					</dl>
+					<dl>
+						<dt>
+							<img class="star" src="images/star-yellow.png" />
+							<img class="star" src="images/star-yellow.png" />
+							<img class="star" src="images/star-yellow.png" />
+							<img class="star" src="images/star-yellow.png" />
+							<img class="star" src="images/star-grey.png" />
+							<span class="ratings">4020 ratings</span>
+						</dt>
+					</dl>
+					<dl>
+						<dt>
+							<span class="price">&yen; 150</span>
+							<span class="cuisine">American Cuisine</span>
+						</dt>
+					</dl>
+				</div>
+			</div>
+			<div class="invite_action">
+		      <a class="btn_accept" href="javascript:;">Accept</a>
+		      <a class="btn_decline" href="javascript:;">Decline</a>
+		    </div>
+    	</div>
     </div>
   </body>
 </html>

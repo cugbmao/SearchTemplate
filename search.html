@@ -32,17 +32,17 @@
             }
             $('.filter > ul > li > a').on('click', function() {
                 if($(this).parent().hasClass('active')){
-                    $('body').removeClass('show_filter');
+                    $('body').removeClass('show_mask');
                     $(this).parent().removeClass('active');
                 }else{
                     $('.filter > ul > li').removeClass('active');
-                    $('body').addClass('show_filter');
+                    $('body').addClass('show_mask');
                     $(this).parent().addClass('active');
                 }
                 
             });
             $('.mask').on('click', function(){
-                $('body').removeClass('show_filter');
+                $('body').removeClass('show_mask');
                 $('.filter > ul > li').removeClass('active');
             });
         });
