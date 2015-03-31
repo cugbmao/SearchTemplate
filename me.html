@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Order List</title>
+    <title>Me</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,18 +15,59 @@
     <script>
         var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
         Zepto(function($) {
-            
+            if (isIOS) {
+                $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
+                    $('.tab_bar').css({
+                        'position' : 'absolute',
+                        'top' : height - $('.tab_bar').height() + 'px'
+                    });
+                }).on('blur', function() {
+                    $('.tab_bar').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '0px'
+                    });
+                });
+            }
         });
     </script>
   </head>
   <body>
     <div class="container">
-      
+      <ul class="me_list">
+      	<li class="info">
+      		<div>
+      			<img src="images/dish.png" class="me_avatar" />
+      			<a class="me_name" href="javascript:;">John</a>
+      			<a class="me_setting" href="javascript:;"></a>
+      		</div>
+      	</li>
+      	<li class="separator"></li>
+      	<li class="info">
+      		<a href="javascript:;">Favorite</a>
+      	</li>
+      	<li class="separator"></li>
+      	<li class="info">
+      		<a href="javascript:;">Reviced Invitation</a>
+      	</li>
+      	<li class="info">
+      		<a href="javascript:;">Sent Invitation</a>
+      	</li>
+      	<li class="separator"></li>
+      	<li class="info">
+      		<a href="javascript:;">My Reviews</a>
+      	</li>
+      	<li class="separator"></li>
+      	<li class="info">
+      		<a href="javascript:;">Payment</a>
+      	</li>
+      </ul>
     </div>
     <footer class="tab_bar">
       <ul>
         <li>
-          <a class="news" href="javascript:;"> </a>
+          <a class="news" href="news.html"> </a>
         </li>
         <li>
           <a class="search" href="search.html"> </a>

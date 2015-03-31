@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+    <meta name="format-detection"  content="telephone=no">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/zepto.min.js"></script>
+    <script>
+        var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+        Zepto(function($) {
+            if (isIOS) {
+                $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
+                    $('.tab_bar').css({
+                        'position' : 'absolute',
+                        'top' : height - $('.tab_bar').height() + 'px'
+                    });
+                }).on('blur', function() {
+                    $('.tab_bar').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '0px'
+                    });
+                });
+            }
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="reminder">
+      	<p class="reminder_title">REMINDER</p>
+      	<p class="reminder_time">19:00</p>
+      	<p class="reminder_rest">Madison's Restaurant</p>
+      	<p class="reminder_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+      </div>
+      <div class="separator"></div>
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Invited by Dai.</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+      <div class="separator"></div>
+      <div class="invite_status">
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      	<div class="invite_status_info">
+      		<p>Jay Chou <span class="accepted">Accepted</span></p>
+      		<p><span>Foolish Day Party</span><span>18:03</span></p>
+      	</div>
+      </div>
+      <div class="separator"></div>
+      <div class="invite_status">
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      	<div class="invite_status_info">
+      		<p>Jay Chou <span class="declined">Declined</span></p>
+      		<p><span>Foolish Day Party</span><span>18:03</span></p>
+      	</div>
+      </div>
+      <div class="separator"></div>
+      <div class="invite_rest_info news_invite">
+	    <div>
+	      <a href="detail.html"> <img src="images/rest.png" /> </a>
+	    </div>
+	    <div>
+	      <dl>
+	        <dt>
+	          <a href="detail.html">Madison's Restaurant</a>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="type">Couple Dinner</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="discount_price">&yen; 150</span>
+	          <span class="origin_price">&yen; 280</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="cuisine">American Cuisine</span>
+	          <span class="distance">430m</span>
+	        </dt>
+	      </dl>
+	    </div>
+	  </div>
+	  <div class="separator"></div>
+      <div class="invite_rest_info news_invite">
+	    <div>
+	      <a href="detail.html"> <img src="images/rest.png" /> </a>
+	    </div>
+	    <div>
+	      <dl>
+	        <dt>
+	          <a href="detail.html">Madison's Restaurant</a>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="rest_name">阿吃尔的餐厅</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-yellow.png" />
+	          <img class="star" src="images/star-grey.png" />
+	          <span class="ratings">4020 ratings</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="price">&yen; 150</span>
+	          <span class="service menu">Menu</span>
+	          <span class="service delivery">Delivery</span>
+	          <span class="service coupon">Coupon</span>
+	        </dt>
+	      </dl>
+	      <dl>
+	        <dt>
+	          <span class="cuisine">American Cuisine</span>
+	          <span class="distance">Promo</span>
+	        </dt>
+	      </dl>
+	    </div>
+	  </div>
+    </div>
+    <footer class="tab_bar">
+      <ul>
+        <li>
+          <a class="news active" href="javascript:;"> </a>
+        </li>
+        <li>
+          <a class="search" href="search.html"> </a>
+        </li>
+        <li>
+          <a class="me" href="me.html"> </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

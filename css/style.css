@@ -15,6 +15,7 @@
 	padding: 0;
 	font-size: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background: #FFFFFF;
 }
 a {
     text-decoration: none;
@@ -37,6 +38,7 @@ body {
 	-webkit-box-orient: vertical;
 	-webkit-box-align: stretch;
 	position: relative;
+	background: #F4F2EF;
 }
 img {
 	-ms-interpolation-mode: bicubic;
@@ -144,7 +146,13 @@ legend, hr, caption {
 	width: 100%;
 	z-index: 1;
 	position: relative;
-	padding-bottom: 49px;
+	background: #FFFFFF;
+}
+.container:after {
+	content: ' ';
+	height: 60px;
+	background: #F4F2EF;
+	display: block;
 }
 .tab_bar {
 	position: fixed;
@@ -613,17 +621,17 @@ body.show_mask{
 .rest_tab ul > li.active > a > span {
     color: #F15B43;
 }
-.rest_phone, .rest_address, .rest_taxi_card{
+.rest_detail > .rest_phone, .rest_detail > .rest_address, .rest_detail > .rest_taxi_card, .rest_detail > .view_rest {
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_phone > a, .rest_address > a, .rest_taxi_card > a {
+.rest_detail > .rest_phone > a, .rest_detail > .rest_address > a, .rest_detail > .rest_taxi_card > a, .rest_detail > .view_rest > a {
 	color: #656565;
 	display: block;
 	min-height: 23px;
 	line-height: 23px;
-	padding: 11px 8px 11px 16px;
+	padding: 11px 16px;
 }
-.rest_phone > a > span {
+.rest_detail > .rest_phone > a > span {
 	display: block;
 	color: #656565;
 	padding-left: 25px;
@@ -632,7 +640,7 @@ body.show_mask{
 	background-image: url(../images/phone.png);
 	background-size: 16px 14px;
 }
-.rest_address > a > span {
+.rest_detail > .rest_address > a > span {
 	display: block;
 	color: #656565;
 	padding-left: 25px;
@@ -641,7 +649,7 @@ body.show_mask{
 	background-image: url(../images/address.png);
 	background-size: 13px 16px;
 }
-.rest_taxi_card > a > span {
+.rest_detail > .rest_taxi_card > a > span {
 	display: block;
 	color: #656565;
 	padding-left: 25px;
@@ -650,23 +658,31 @@ body.show_mask{
 	background-image: url(../images/taxi.png);
 	background-size: 15px 16px;
 }
-.rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .rest_other > header{
+.rest_detail > .view_rest > a > span {
+	display: block;
+	color: #999999;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url(../images/arrow-right.png);
+	background-size: 5px 8px;
+}
+.rest_detail > header, .rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .rest_other > header{
 	background: #F5F2F0;
 	border-bottom: 1px solid #DDDDDD;
 	height: 45px;
 }
-.rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
+.rest_detail > header > a, .rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
 	color: #999999;
 	display: block;
 	height: 23px;
 	line-height: 23px;
 	padding: 16px 16px 6px 16px;
 }
-.rest_invite > footer, .rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer{
+.rest_detail > footer, .rest_invite > footer, .rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer{
 	background: #FFFFFF;
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_invite > footer > a, .rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a {
+.rest_detail > footer > a, .rest_invite > footer > a, .rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a {
 	color: #999999;
 	display: block;
 	height: 23px;
@@ -927,7 +943,8 @@ body.show_mask{
 	position: fixed;
 	top: 60px;
 	left: 50%;
-	width: 80%;
+	width: calc(80% - 20px);
+	padding: 8px;
 	margin-left: -40%;
 	background: #FFF;
 	-webkit-border-radius: 8px;
@@ -1051,7 +1068,7 @@ body.show_mask{
 	left: 10px;
 	right: 10px;
 	top: 60px;
-	bottom: 160px;
+	bottom: 165px;
 }
 .invite_panel > .panel_content > .invite_sub > .invite_address {
 	position: absolute;
@@ -1088,7 +1105,7 @@ body.show_mask{
 	bottom: 55px;
 	height: 82px;
 	padding: 11px 0px;
-	border-top: 1px solid #DDDDDD;
+	border-top: 1px dotted #DDDDDD;
 }
 .invite_panel > .panel_content > .invite_panel_rest_info > div{
     vertical-align: top;
@@ -1492,4 +1509,175 @@ body.show_mask{
 .order_request > textarea {
 	width: 100%;
 	min-height: 50px;
+}
+.me_list > li {
+	border-bottom: 1px solid #DDDDDD;
+}
+.separator {
+	height: 11px;
+	background: #F4F2EF;
+	border-bottom: 1px solid #DDDDDD;
+	display: block;
+}
+.me_list > li.info {
+	padding: 10px 15px;
+	position: relative;
+}
+.me_list > li.info > div > .me_avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+.me_list > li.info > div > .me_name {
+	font-size: 19px;
+	color: #333333;
+	position: absolute;
+	left: 80px;
+	right: 60px;
+	top: 10px;
+	bottom: 10px;
+	line-height: 60px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.me_list > li.info > div > .me_setting {
+	float: right;
+	background-image: url(../images/setting.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 21px 21px;
+	width: 40px;
+	height: 60px;
+}
+.me_list > li.info > a {
+	display: block;
+	font-size: 16px;
+	color: #656565;
+	line-height: 24px;
+	background-image: url(../images/arrow-right.png);
+	background-size: 5px 9px;
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+.reminder, .reminder_invite, .invite_status {
+	border-bottom: 1px solid #DDDDDD;
+	padding: 10px 15px;
+	position: relative;
+}
+.reminder > p, .reminder_invite > .reminder_invite_info > p, .invite_status > .invite_status_info > p {
+	line-height: 21px;
+}
+.reminder > .reminder_title {
+	font-size: 14px;
+	color: #333333;
+}
+.reminder > .reminder_time {
+	font-size: 19px;
+	color: #F15B43;
+}
+.reminder_invite > .reminder_invite_info {
+	margin-right: 50px;
+}
+.reminder > .reminder_rest, .reminder_invite > .reminder_invite_info > .invite_info_rest {
+	font-size: 16px;
+	color: #656565;
+	font-weight: 500;
+}
+.reminder > .reminder_address, .reminder_invite > .reminder_invite_info > .invite_info_address {
+	font-size: 16px;
+	color: #656565;
+}
+.reminder_invite > .reminder_invite_info > .invite_info_title {
+	font-size: 19px;
+	color: #333333;
+	font-weight: 700px;
+}
+.reminder_invite > .reminder_invite_info > .invite_info_by {
+	font-size: 14px;
+	color: #999999;
+}
+.reminder_invite > .user_info {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+.invite_status > .user_info {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+}
+.reminder_invite > .user_info > .user_avatar, .invite_status > .user_info > .user_avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+}
+.invite_status > .invite_status_info {
+	margin-left: 50px;
+}
+.invite_status > .invite_status_info > p:first-of-type {
+	color: #333333;
+	font-size: 16px;
+}
+.invite_status > .invite_status_info > p:last-of-type {
+	color: #999999;
+	font-size: 14px;
+	position: relative;
+}
+.invite_status > .invite_status_info > p:first-of-type > .accepted {
+	color: #F15B43;
+}
+.invite_status > .invite_status_info > p:first-of-type > span {
+	font-weight: 500;
+}
+.invite_status > .invite_status_info > p:last-of-type > span:first-of-type {
+	display: block;
+	margin-right: 40px;
+}
+.invite_status > .invite_status_info > p:last-of-type > span:last-of-type {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.invite_rest_info.news_invite, .invite_rest_info.coupon_info {
+	position: relative;
+	top: inherit;
+	left: inherit;
+	right: inherit;
+	bottom: inherit;
+	border-top: none;
+	height: auto;
+	border-bottom: 1px solid #DDDDDD;
+}
+.invite_rest_info.news_invite > div > dl > dt > .rest_name {
+	text-align:left;
+ 	color: #999999;
+	font-size: 14px;
+}
+.invite_rest_info.news_invite > div > dl > dt > .origin_price {
+ 	text-align:left;
+ 	color: #999999;
+	font-size: 14px;
+	text-decoration:line-through;
+ }
+.invite_rest_info.news_invite > div > dl > dt > .discount_price {
+	text-align:left;
+	padding-right: 10px;
+	color: #F15B43;
+	font-size: 16px;
+}
+.invite_rest_info.coupon_info > div:first-of-type {
+	width: 72px;
+	height: 57px;
+}
+.invite_rest_info.coupon_info > div > a > img {
+	width: 72px;
+	height: 57px;
+}
+.invite_rest_info.coupon_info > div > dl > dt {
+	line-height: 19px;
 }
