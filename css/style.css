@@ -137,6 +137,9 @@ legend, hr, caption {
 .hide {
 	display: none;
 }
+.clear {
+	clear: both;
+}
 .container {
 	width: 100%;
 	z-index: 1;
@@ -997,11 +1000,11 @@ body.show_mask{
 
 .invite_panel {
 	position: fixed;
-	top: 60px;
+	top: 32px;
+	bottom: 32px;
 	left: 20px;
 	right: 20px;
 	z-index: 12;
-	min-height: 360px;
 	display: none;
 	z-index: 10000;
 }
@@ -1042,6 +1045,42 @@ body.show_mask{
 	height: 30px;
 	padding: 10px 0px;
 }
+.invite_panel > .panel_content > .invite_sub {
+	position: absolute;
+	overflow: scroll;
+	left: 10px;
+	right: 10px;
+	top: 60px;
+	bottom: 160px;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_address {
+	position: absolute;
+	left: 0px;
+	right: 140px;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_time {
+	width: 135px;
+	float: right;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_desc {
+	margin-top: 10px;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_address > dl:first-of-type, .invite_panel > .panel_content > .invite_sub > .invite_time > dl:first-of-type, .invite_panel > .panel_content > .invite_sub > .invite_desc > dl:first-of-type {
+	color: #333333;
+	font-size: 14px;
+	background-image: url(../images/title-tag.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: 14px 7px;
+	line-height: 16px;
+	padding: 10px 0px;
+}
+.invite_panel > .panel_content > .invite_sub > .invite_address > dl:last-of-type, .invite_panel > .panel_content > .invite_sub > .invite_time > dl:last-of-type, .invite_panel > .panel_content > .invite_sub > .invite_desc > dl:last-of-type {
+	color: #656565;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0px;
+}
 .invite_panel > .panel_content > .invite_panel_rest_info {
 	position: absolute;
 	left: 10px;
@@ -1061,7 +1100,6 @@ body.show_mask{
 	float: left;
 }
 .invite_panel > .panel_content > .invite_panel_rest_info > div:last-of-type{
-	/*width: 100%;*/
 	overflow: hidden;
 }
 .invite_panel > .panel_content > .invite_panel_rest_info > div > a > img{
@@ -1073,7 +1111,7 @@ body.show_mask{
     overflow:hidden;
 }
 .invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt{
-    line-height: 19px;
+    line-height: 26px;
     position: relative;
 }
 .invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > a{
@@ -1083,7 +1121,7 @@ body.show_mask{
     width:100%;
     color: #333333;
     font-size:20px;
-    line-height: 20px;
+    line-height: 26px;
     word-break: break-all;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1103,11 +1141,6 @@ body.show_mask{
 	width: calc(100% - 50px);
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-@media screen and (max-width: 360px) {
-	.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .cuisine, .invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .ratings{
-		float: right;
-	}
 }
 .invite_panel > .panel_content > .invite_action {
 	position: absolute;
@@ -1133,17 +1166,16 @@ body.show_mask{
 .invite_panel > .panel_content > .invite_action > a.btn_decline {
 	background: #999999;
 }
-.invite_panel > .panel_content > .invite_sub {
-	position: relative;
-}
-.invite_panel > .panel_content > .invite_sub > .invite_address {
-	position: absolute;
-	left: 0px;
-	right: 135px;
-}
-.invite_panel > .panel_content > .invite_sub > .invite_time {
-	width: 135px;
-	float: right;
+@media screen and (max-width: 360px) {
+	.invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .cuisine, .invite_panel > .panel_content > .invite_panel_rest_info > div > dl > dt > .ratings{
+		float: right;
+	}
+	.invite_panel > .panel_content > .invite_sub > .invite_time {
+		width: 90px;
+	}
+	.invite_panel > .panel_content > .invite_sub > .invite_address {
+		right: 95px;
+	}
 }
 
 .dish_list {
