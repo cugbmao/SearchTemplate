@@ -154,6 +154,12 @@ legend, hr, caption {
 	background: #F4F2EF;
 	display: block;
 }
+.container.no_tabbar:after {
+	content: ' ';
+	height: 10px;
+	background: #F4F2EF;
+	display: block;
+}
 .tab_bar {
 	position: fixed;
 	left: 0px;
@@ -666,23 +672,23 @@ body.show_mask{
 	background-image: url(../images/arrow-right.png);
 	background-size: 5px 8px;
 }
-.rest_detail > header, .rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .rest_other > header{
+.rest_detail > header, .rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .coupon_info > header, .other_coupon > header, .rest_other > header{
 	background: #F5F2F0;
 	border-bottom: 1px solid #DDDDDD;
 	height: 45px;
 }
-.rest_detail > header > a, .rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a {
+.rest_detail > header > a, .rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a, .coupon_info > header > a, .other_coupon > header > a {
 	color: #999999;
 	display: block;
 	height: 23px;
 	line-height: 23px;
 	padding: 16px 16px 6px 16px;
 }
-.rest_detail > footer, .rest_invite > footer, .rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer{
+.rest_detail > footer, .rest_invite > footer, .rest_reviews > footer, .rest_menu > footer, .rest_coupon > footer, .coupon_info > footer, .other_coupon > footer {
 	background: #FFFFFF;
 	border-bottom: 1px solid #DDDDDD;
 }
-.rest_detail > footer > a, .rest_invite > footer > a, .rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a {
+.rest_detail > footer > a, .rest_invite > footer > a, .rest_reviews > footer > a, .rest_menu > footer > a, .rest_coupon > footer > a, .coupon_info > footer > a, .other_coupon > footer > a {
 	color: #999999;
 	display: block;
 	height: 23px;
