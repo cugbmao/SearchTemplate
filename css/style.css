@@ -1077,13 +1077,13 @@ body.show_mask{
 	bottom: 165px;
 }
 .invite_panel > .panel_content > .invite_sub > .invite_address {
-	position: absolute;
-	left: 0px;
-	right: 140px;
+	margin-right: 140px;
 }
 .invite_panel > .panel_content > .invite_sub > .invite_time {
 	width: 135px;
-	float: right;
+	position: absolute;
+	top: 0px;
+    right: 0px;
 }
 .invite_panel > .panel_content > .invite_sub > .invite_desc {
 	margin-top: 10px;
@@ -1197,7 +1197,7 @@ body.show_mask{
 		width: 90px;
 	}
 	.invite_panel > .panel_content > .invite_sub > .invite_address {
-		right: 95px;
+		margin-right: 95px;
 	}
 }
 
