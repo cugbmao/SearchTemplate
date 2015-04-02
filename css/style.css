@@ -695,6 +695,12 @@ body.show_mask{
 	line-height: 23px;
 	padding: 11px 16px 11px 16px;
 }
+.coupon_info > .coupon_detail {
+	border-bottom: 1px solid #DDDDDD;
+}
+.coupon_info > .coupon_detail > p {
+	padding: 5px 16px;
+}
 .rest_menu > footer > a > span {
 	display: block;
 	background-position: center right;
@@ -1664,16 +1670,47 @@ body.show_mask{
  	color: #999999;
 	font-size: 14px;
 }
+.buy_price {
+	color: #F5A905;
+}
+.origin_price {
+	color: #999999;
+	text-decoration:line-through;
+}
+.discount_price {
+	color: #F15B43;
+}
+.buy_coupon {
+	border-bottom: 1px solid #DDDDDD;
+}
+.buy_coupon > p {
+	padding-left: 16px;
+	line-height: 53px;
+}
+.buy_coupon > p > .buy_price {
+	font-size: 19px;
+}
+.buy_coupon > p > .origin_price {
+	font-size: 14px;
+	margin-left: 10px;
+}
+.buy_coupon > p > .buy {
+	background: #F15B43;
+	width: 110px;
+	height: 55px;
+	display: block;
+	float: right;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+}
 .invite_rest_info.news_invite > div > dl > dt > .origin_price {
  	text-align:left;
- 	color: #999999;
 	font-size: 14px;
-	text-decoration:line-through;
  }
 .invite_rest_info.news_invite > div > dl > dt > .discount_price {
 	text-align:left;
 	padding-right: 10px;
-	color: #F15B43;
 	font-size: 16px;
 }
 .invite_rest_info.coupon_info > div:first-of-type {
@@ -1686,4 +1723,12 @@ body.show_mask{
 }
 .invite_rest_info.coupon_info > div > dl > dt {
 	line-height: 19px;
+}
+.buy_coupon_info {
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 8px 16px;
+}
+.buy_coupon_info > dl > dt {
+	line-height: 24px;
 }
