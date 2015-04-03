@@ -195,7 +195,7 @@ legend, hr, caption {
 	vertical-align: bottom;
 	position: relative;
 }
-.tab_bar ul li a span{
+.tab_bar ul li a span {
 	font-size: 12px;
 	text-align: center;
 	position: absolute;
@@ -203,6 +203,9 @@ legend, hr, caption {
 	width: 100%;
 	bottom: 0px;
 	color: #919191;
+}
+.tab_bar ul li a.active span {
+	color: #FFFFFF;
 }
 .tab_bar ul li a.news {
 	background-size: 20.5px 23px;
