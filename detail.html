@@ -54,6 +54,14 @@
             	$('body').addClass('show_mask');
             	$('.invite_panel').show();
             });
+            $('.btn_accept').on('click', function(){
+            	$('body').removeClass('show_mask');
+            	$('.invite_panel').hide();
+            });
+            $('.btn_deline').on('click', function(){
+            	$('body').removeClass('show_mask');
+            	$('.invite_panel').hide();
+            });
         });
     </script>
   </head>

@@ -1684,7 +1684,7 @@ body.show_mask{
 	border-bottom: 1px solid #DDDDDD;
 }
 .buy_coupon > p {
-	padding-left: 16px;
+	padding: 0px 16px;
 	line-height: 53px;
 }
 .buy_coupon > p > .buy_price {
@@ -1703,6 +1703,102 @@ body.show_mask{
 	color: #FFFFFF;
 	text-align: center;
 	font-size: 16px;
+	margin-right: -16px;
+}
+.buy_coupon > p > .dish_plus {
+	width: 30px;
+	background-repeat: no-repeat;
+	background-image: url(../images/plus.png);
+	background-position: center;
+	background-size: 20px;
+	display: inline-block;
+}
+.buy_coupon > p > .dish_count {
+	font-size: 16px;
+	color: #656565;
+	padding: 5px;
+}
+.buy_coupon > p > .dish_minus {
+	width: 30px;
+	background-repeat: no-repeat;
+	background-image: url(../images/minus.png);
+	background-position: center;
+	background-size: 20px;
+	display: inline-block;
+}
+.buy_coupon > p > .total_price {
+	float: right;
+	color: #f5a905;
+	font-size: 16px;
+}
+.buy_coupon > p > .total_txt {
+	float: right;
+	color: #999999;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.buy_coupon > .paypal {
+	border-bottom: 1px solid #DDDDDD;
+}
+.buy_coupon > p > .checked {
+	width: 30px;
+	background-image: url(../images/checked.png);
+	background-position: center;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	float: right;
+}
+.buy_coupon > .paypal_tip_title {
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	color: #656565;
+}
+.buy_coupon > .paypal_name, .buy_coupon > .paypal_email {
+	height: 28px;
+	line-height: 28px;
+	font-size: 16px;
+	color: #656565;
+	text-align: center;
+	font-weight: 500;
+}
+.buy_coupon > .paypal_email {
+	color: #333333;
+}
+.buy_coupon > p > .pay_email {
+	color: #333333;
+	font-size: 16px;
+}
+.buy_coupon > p > input {
+	width: calc(100% - 50px);
+}
+.padding {
+	height: 40px;
+	background: transparent;
+}
+.call_tip {
+	height: 50px;
+	line-height: 50px;
+	background: #F5F2F0;
+	color: #999999;
+	font-size: 14px;
+	position: fixed;
+	bottom: 50px;
+	left: 0px;
+	right: 0px;
+	padding: 0 16px;
+	z-index: 999;
+	border-top: 1px solid #DDDDDD;
+}
+.call_tip > a {
+	color: #999999;
+}
+.paypal_tip {
+	border-bottom: 1px solid #DDDDDD;
+	color: #656565;
+	line-height: 24px;
+	padding: 10px 16px;
+	font-size: 14px;
 }
 .invite_rest_info.news_invite > div > dl > dt > .origin_price {
  	text-align:left;
@@ -1731,4 +1827,59 @@ body.show_mask{
 }
 .buy_coupon_info > dl > dt {
 	line-height: 24px;
+}
+.buy_coupon_info > dl > dt > .coupon_rest_name {
+	color: #333333;
+	font-size: 17px;
+	font-weight: 500;
+}
+.buy_coupon_info > dl > dt > .coupon_name {
+	color: #333333;
+	font-size: 16px;
+}
+.buy_coupon_info > dl > dt > .buy_price, .buy_coupon_info > dl > dt > .origin_price {
+	float: right;
+}
+.buy_coupon_info > dl > dt > .origin_price {
+	font-size: 14px;
+	margin-right: 10px;
+}
+.buy_coupon_info > dl > dt > .buy_price {
+	font-size: 16px;
+}
+.payment {
+	padding: 10px 16px;
+}
+.payment > p {
+	color: #656565;
+	font-size: 16px;
+}
+.payment > input {
+	width: 100%;
+	height: 24px;
+}
+.result_title > p {
+	color: #656565;
+	font-size: 17px;
+	text-align: center;
+	padding: 10px 16px;
+	line-height: 22px;
+	background: #F5F2F0;
+}
+.other_coupon > .order_number {
+	border-bottom: 1px solid #DDDDDD;
+}
+.other_coupon > .order_number > a {
+	color: #999999;
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 11px 16px 11px 16px;
+}
+.other_coupon > .order_number > a > span {
+	display: block;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url(../images/arrow-right.png);
+	background-size: 5px 9px;
 }
