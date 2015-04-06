@@ -84,7 +84,9 @@ h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
 	font-size: 1em;
 }
 body, input, button, select, textarea, sub {
-	font-family: MuseoSans, sans-serif, Arial, "冬青黑体简体中文";
+	font-family: "museo-sans", sans-serif, Arial, "Hiragino Sans GB";
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
 }
 em, cite, address, optgroup {
 	font-style: normal;
@@ -165,7 +167,7 @@ legend, hr, caption {
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
-	height: 49px;
+	height: 48px;
 	z-index: 999;
 	background-color: #FFFEFE;
 	border-top: 1px solid #DDDDDD;
@@ -403,8 +405,8 @@ legend, hr, caption {
 	display: -moz-box;
 	-webkit-box-orient: horizontal;
 	-moz-box-orient: horizontal;*/
-	height: 82px;
-	padding: 11px 8px 11px 16px;
+	height: 66px;
+	padding: 11px 8px 11px 12px;
 	border-bottom: 1px solid #DDDDDD;
 }
 .rest_list > ul > li > div{
@@ -412,8 +414,8 @@ legend, hr, caption {
     vertical-align: top;
 }
 .rest_list > ul > li > div:first-of-type{
-	width: 100px;
-	height: 80px;
+	width: 80px;
+	height: 64px;
 	overflow: hidden;
 	float: left;
 }
@@ -422,15 +424,15 @@ legend, hr, caption {
 	overflow: hidden;
 }
 .rest_list > ul > li > div > a > img{
-	width: 100px;
-	height: 80px;
+	width: 80px;
+	height: 64px;
 }
 .rest_list > ul > li > div > dl{
     margin-left:9px;
     overflow:hidden;
 }
 .rest_list > ul > li > div > dl > dt{
-    line-height: 19px;
+    line-height: 16px;
     position: relative;
 }
 .rest_list > ul > li > div > dl > dt > a{
@@ -439,27 +441,37 @@ legend, hr, caption {
     display:block;
     width:100%;
     color: #333333;
-    font-size:20px;
-    line-height: 20px;
-    word-break: break-all;
+    font-size:17px;
+/*    line-height: 20px;
+*/    word-break: break-all;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-weight: 500;
 }
 .rest_list > ul > li > div > dl > dt > .star{
 	width: 11px;
 	height: 10px;
 }
-.rest_list > ul > li > div > dl > dt > .ratings, .rest_list > ul > li > div > dl > dt > .price{
+.rest_list > ul > li > div > dl > dt > .ratings{
 	color: #656565;
-	font-size: 14px;
-}
-.rest_list > ul > li > div > dl > dt > .service{
 	font-size: 12px;
+}
+
+.rest_list > ul > li > div > dl > dt > .price{
+	color: #656565;
+	font-size: 12px;
+	padding-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.rest_list > ul > li > div > dl > dt > .service{
+	font-size: 7px;
 	border-width: 1px;
-	border-radius: 7px;
+	border-radius: 10px;
 	border-style:solid;
-	padding: 1px 1px;
-	line-height: 16px;
+	padding: 1px 4px;
+	font-weight: 500;
 }
 .rest_list > ul > li > div > dl > dt > .menu{
 	color: #f5a905;
@@ -475,7 +487,7 @@ legend, hr, caption {
 }
 .rest_list > ul > li > div > dl > dt > .cuisine, .rest_list > ul > li > div > dl > dt > .distance{
 	color: #999999;
-	font-size: 14px;
+	font-size: 12px;
 }
 .rest_list > ul > li > div > dl > dt > .cuisine{
 	display: inline-block;
@@ -486,7 +498,7 @@ legend, hr, caption {
 }
 .rest_list > ul > li > div > dl > dt > .distance{
 	position: absolute;
-	right: 8px;
+	right: 4px;
 }
 body.show_mask{
 	/*overflow: hidden;*/
@@ -557,14 +569,14 @@ body.show_mask{
 .gallery > div > img{
 	width: 139px;
 	height: 96px;
-	margin-right: 3px;
+	margin-right: -1px;
 }
 .gallery > div > img:last-of-type{
 	margin-right: 0px;
 }
 .rest_info{
 	height: 48px;
-	padding: 11px 8px 11px 16px;
+	padding: 13px 8px 11px 16px;
 	border-bottom: 1px solid #DDDDDD;
 	overflow: hidden;
 }
@@ -578,7 +590,7 @@ body.show_mask{
     width: 100%;
     color: #333333;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 500;
     word-break: break-all;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -589,7 +601,7 @@ body.show_mask{
 }
 .rest_info dl dt .ratings, .rest_info dl dt .price{
 	color: #656565;
-	font-size: 14px;
+	font-size: 12px;
 }
 .rest_info dl dt .price{
 	margin-left: 30px;
@@ -617,12 +629,13 @@ body.show_mask{
 }
 .rest_tab ul > li.active {
     border-bottom: 2px solid #F15C44;
+    font-weight: 500;
 }
 .rest_tab ul > li > a {
 	display: block;
 	height: 49px;
 	line-height: 49px;
-	font-size: 16px;
+	font-size: 14px;
 }
 .rest_tab ul > li > a > span {
     color: #999999;
@@ -630,6 +643,11 @@ body.show_mask{
 .rest_tab ul > li.active > a > span {
     color: #F15B43;
 }
+
+.rest_detail {
+	font-size: 14px;
+}
+
 .rest_detail > .rest_phone, .rest_detail > .rest_address, .rest_detail > .rest_taxi_card, .rest_detail > .view_rest {
 	border-bottom: 1px solid #DDDDDD;
 }
@@ -678,7 +696,8 @@ body.show_mask{
 .rest_detail > header, .rest_invite > header, .rest_reviews > header, .rest_menu > header, .rest_coupon > header, .coupon_info > header, .other_coupon > header, .rest_other > header{
 	background: #F5F2F0;
 	border-bottom: 1px solid #DDDDDD;
-	height: 45px;
+	height: 42px;
+	font-size: 14px;
 }
 .rest_detail > header > a, .rest_invite > header > a, .rest_reviews > header > a, .rest_menu > header > a, .rest_coupon > header > a, .coupon_info > header > a, .other_coupon > header > a {
 	color: #999999;
@@ -700,9 +719,10 @@ body.show_mask{
 }
 .coupon_info > .coupon_detail {
 	border-bottom: 1px solid #DDDDDD;
+	padding: 10px 16px;
+	color: #656565;
 }
 .coupon_info > .coupon_detail > p {
-	padding: 5px 16px;
 }
 .rest_menu > footer > a > span {
 	display: block;
@@ -725,7 +745,7 @@ body.show_mask{
 	
 }
 .rest_reviews > ul > li {
-	height: 89px;
+	height: 100px;
 	padding: 14px 16px 14px 16px;
 	border-bottom: 1px solid #DDDDDD;
 }
@@ -895,11 +915,11 @@ body.show_mask{
 }
 .rest_reviews > ul > li > div > dl > dt > .time{
 	color: #999999;
-	font-size: 14px;
+	font-size: 12px;
 }
 .rest_reviews > ul > li > div > dl > dt > .comment{
  	color: #656565;
-	font-size: 16px;
+	font-size: 14px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -916,10 +936,9 @@ body.show_mask{
 	padding: 14px 16px;
 }
 .review_1_step > p, .review_2_step > div > p, .review_3_step > p {
-	font-size: 16px;
-	color: #656565;
+	font-size: 14px;
+	color: #333;
 	height: 25px;
-	line-height: 25px;
 	text-align: center;
 }
 .review_3_step > p > input{
@@ -1070,19 +1089,17 @@ body.show_mask{
 }
 .invite_panel > .panel_content > .invite_name {
 	color: #333333;
-	font-size: 26px;
-	font-weight: bold;
+	font-size: 22px;
+	font-weight: 500;
 	text-align: center;
-	line-height: 30px;
-	height: 30px;
 	padding: 10px 0px;
 }
 .invite_panel > .panel_content > .invite_sub {
 	position: absolute;
-	overflow: scroll;
-	left: 10px;
-	right: 10px;
-	top: 60px;
+	overflow: hidden;
+	left: 14px;
+	right: 14px;
+	top: 64px;
 	bottom: 165px;
 }
 .invite_panel > .panel_content > .invite_sub > .invite_address {
@@ -1284,17 +1301,25 @@ body.show_mask{
 	color: #999999;
 }
 .invite_group {
-	height: 50px;
+	height: 42px;
 	border-bottom: 1px solid #DDDDDD;
 	padding: 14px 16px;
 }
-.invite_group > p, .invite_group > input, .invite_group > textarea   {
-	font-size: 16px;
-	color: #656565;
-	height: 25px;
-	line-height: 25px;
+.invite_group > p {
+	font-size: 12px;
+	font-weight: 500;
+	color: #333;
+	line-height: 20px;
 	width: 100%;
 }
+
+.invite_group > input, .invite_group > textarea   {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999;
+	width: 100%;
+}
+
 .invite_group.more {
 	border-bottom: none;
 }
@@ -1307,24 +1332,26 @@ body.show_mask{
 	line-height: 32px;
 	border-bottom: 1px solid #DDDDDD;
 	padding: 14px 16px;
-	font-size: 22px;
+	font-size: 20px;
 	color: #333333;
-	font-weight: bold;
+	font-weight: 500;
 }
 .invite_info_group {
-	height: 50px;
+	height: 42px;
 	border-bottom: 1px solid #DDDDDD;
 	padding: 14px 16px;
 }
 .invite_info_group > p {
-	font-size: 16px;
-	color: #333333;
-	height: 25px;
-	line-height: 25px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #333;
+	line-height: 20px;
 	width: 100%;
 }
 .invite_info_group > p.invite_info {
 	color: #656565;
+	font-size: 14px;
+	font-weight: 300;
 }
 .invite_info_group.more {
 	border-bottom: none;
@@ -1337,8 +1364,9 @@ body.show_mask{
 	bottom: 50px;
 	z-index: 999;
 	height: 82px;
-	padding: 11px 8px 11px 16px;
+	padding: 11px 8px 3px 16px;
 	border-top: 1px solid #DDDDDD;
+	background-color: #fff;
 }
 .invite_rest_info > div{
     /*display: table-cell;*/
@@ -1361,6 +1389,7 @@ body.show_mask{
 .invite_rest_info > div > dl{
     margin-left:9px;
     overflow:hidden;
+    padding: 1px 0;
 }
 .invite_rest_info > div > dl > dt{
     line-height: 19px;
@@ -1422,15 +1451,13 @@ body.show_mask{
 	right: 8px;
 }
 .order_list_title {
-	height: 50px;
 	/*border-bottom: 1px solid #DDDDDD;*/
-	padding: 7px 16px;
+	padding: 16px 16px;
 }
 .order_list_title > p {
 	text-align: center;
-	font-size:  17px;
+	font-size: 15px;
 	color: #656565;
-	line-height: 25px;
 }
 .order_list_title_separator {
 	height: 7px;
@@ -1767,6 +1794,7 @@ body.show_mask{
 }
 .buy_coupon > .paypal_email {
 	color: #333333;
+	padding-bottom: 10px;
 }
 .buy_coupon > p > .pay_email {
 	color: #333333;
@@ -1799,7 +1827,6 @@ body.show_mask{
 .paypal_tip {
 	border-bottom: 1px solid #DDDDDD;
 	color: #656565;
-	line-height: 24px;
 	padding: 10px 16px;
 	font-size: 14px;
 }
@@ -1851,22 +1878,25 @@ body.show_mask{
 	font-size: 16px;
 }
 .payment {
-	padding: 10px 16px;
+	  height: 42px;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 14px 16px;
 }
 .payment > p {
-	color: #656565;
-	font-size: 16px;
+	color: #333;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
 }
 .payment > input {
 	width: 100%;
-	height: 24px;
+	font-size: 14px;
 }
 .result_title > p {
 	color: #656565;
 	font-size: 17px;
 	text-align: center;
-	padding: 10px 16px;
-	line-height: 22px;
+	padding: 14px 16px;
 	background: #F5F2F0;
 }
 .other_coupon > .order_number {
