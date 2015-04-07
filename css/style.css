@@ -276,8 +276,11 @@ legend, hr, caption {
 	background-image: url(../images/photo-tab-active.png);
 }
 .tab_bar ul li a.favorite.active {
-	background-color: #F15C44;
+	/*background-color: #F15C44;*/
 	background-image: url(../images/fav-tab-active.png);
+}
+.tab_bar ul li a.favorite.active span {
+	color: #F15C44;
 }
 .tab_bar > a.btn_add_review, .tab_bar > a.btn_add_invite, .tab_bar > a.btn_share_invite {
 	display: block;
@@ -1674,7 +1677,7 @@ body.show_mask{
 	font-size: 14px;
 	position: relative;
 }
-.invite_status > .invite_status_info > p:first-of-type > .accepted {
+.invite_status > .invite_status_info > p:first-of-type > .accepted, .reminder_invite_info > p > .accepted {
 	color: #F15B43;
 }
 .invite_status > .invite_status_info > p:first-of-type > span {
