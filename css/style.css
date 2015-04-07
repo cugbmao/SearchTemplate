@@ -9,6 +9,10 @@
  *********************************************************************************************/
 @charset "utf-8";
 
+@font-face {
+	font-family: "museo-sans";
+	src: url('font/Museo100-Regular.otf'), url('font/Museo300-Regular.otf'), url('font/Museo500-Regular.otf'), url('font/Museo700-Regular.otf'), url('font/Museo900-Regular.otf');
+}
 *{	
 	margin: 0;
 	outline: 0;
@@ -590,7 +594,7 @@ body.show_mask{
     width: 100%;
     color: #333333;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 700;
     word-break: break-all;
     white-space: nowrap;
     text-overflow: ellipsis;
