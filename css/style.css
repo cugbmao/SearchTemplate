@@ -11,7 +11,7 @@
 
 @font-face {
 	font-family: "museo-sans";
-	src: url('font/Museo100-Regular.otf'), url('font/Museo300-Regular.otf'), url('font/Museo500-Regular.otf'), url('font/Museo700-Regular.otf'), url('font/Museo900-Regular.otf');
+	src: url('font/MuseoSans-100.otf'), url('font/MuseoSans-300.otf'), url('font/MuseoSans-500.otf'), url('font/MuseoSans-700.otf'), url('font/MuseoSans-900.otf');
 }
 *{	
 	margin: 0;
