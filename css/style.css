@@ -10,8 +10,33 @@
 @charset "utf-8";
 
 @font-face {
+    font-family: "museo-sans";
+    src: url('font/MuseoSans-100.otf');
+}
+@font-face {
 	font-family: "museo-sans";
-	src: url('font/MuseoSans-100.otf'), url('font/MuseoSans-300.otf'), url('font/MuseoSans-500.otf'), url('font/MuseoSans-700.otf'), url('font/MuseoSans-900.otf');
+	src: url('font/MuseoSans-100.otf');
+	font-weight: 100;
+}
+@font-face {
+    font-family: "museo-sans";
+    src: url('font/MuseoSans-300.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "museo-sans";
+    src: url('font/MuseoSans-500.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "museo-sans";
+    src: url('font/MuseoSans-700.otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: "museo-sans";
+    src: url('font/MuseoSans-900.otf');
+    font-weight: 900;
 }
 *{	
 	margin: 0;
@@ -1642,7 +1667,7 @@ body.show_mask{
 .reminder_invite > .reminder_invite_info > .invite_info_title {
 	font-size: 19px;
 	color: #333333;
-	font-weight: 700px;
+	font-weight: 700;
 }
 .reminder_invite > .reminder_invite_info > .invite_info_by {
 	font-size: 14px;
