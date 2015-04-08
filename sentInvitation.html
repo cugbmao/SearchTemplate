@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sent Invitation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+    <meta name="format-detection"  content="telephone=no">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/zepto.min.js"></script>
+    <script>
+        var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+        Zepto(function($) {
+            if (isIOS) {
+                $('input').on('focus', function() {
+                    var cheight = $('.container').height(), bheight = $('body').height(), height = cheight > bheight ? cheight : bheight;
+                    $('.tab_bar').css({
+                        'position' : 'absolute',
+                        'top' : height - $('.tab_bar').height() + 'px'
+                    });
+                }).on('blur', function() {
+                    $('.tab_bar').css({
+                        'position' : 'fixed',
+                        'top' : '',
+                        'bottom' : '0px'
+                    });
+                });
+            }
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container no_tabbar">
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Create at 2015-03-31</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_by">Time: 2015-04-01 19:00</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+	      	<p>3 people <span class="accepted">Accepted</span></p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+      <div class="separator"></div>
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Create at 2015-03-31</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_by">Time: 2015-04-01 19:00</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+	      	<p>3 people <span class="accepted">Accepted</span></p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+      <div class="separator"></div>
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Create at 2015-03-31</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_by">Time: 2015-04-01 19:00</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+	      	<p>3 people <span class="accepted">Accepted</span></p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+      <div class="separator"></div>
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Create at 2015-03-31</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_by">Time: 2015-04-01 19:00</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+	      	<p>3 people <span class="accepted">Accepted</span></p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+      <div class="separator"></div>
+      <div class="reminder_invite">
+      	<div class="reminder_invite_info">
+	      	<p class="invite_info_title">Foolish Day Party</p>
+	      	<p class="invite_info_by">Create at 2015-03-31</p>
+	      	<p class="invite_info_rest">Madison's Restaurant</p>
+	      	<p class="invite_info_by">Time: 2015-04-01 19:00</p>
+	      	<p class="invite_info_address">Bldg 2, 3 Fenyang Rd. (M Huaihai Rd.)</p>
+	      	<p>3 people <span class="accepted">Accepted</span></p>
+      	</div>
+      	<a href="javascript:;" class="user_info">
+      		<img class="user_avatar" src="images/dish.png" />
+      	</a>
+      </div>
+    </div>
+  </body>
+</html>
