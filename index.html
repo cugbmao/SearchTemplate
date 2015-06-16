@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// var reg = /^[a-z,A-Z]{2}[0-9]{3}$/;
+// if (reg.test("ADD1125")){
+	// alert("1");
+// }else{
+	// alert("2");
+// }
+var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+if(isIOS){
+	alert(navigator.appVersion.substr(navigator.appVersion.indexOf('OS')+3,1));
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
